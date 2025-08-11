@@ -472,57 +472,88 @@ margin-top: 0;
     height: 800px;
     background-color: black;
     margin: 0;
-    padding: 0%;
+    padding: 0;
     display: flex;
-    }
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
 
+/* Estilos para la imagen */
 .fotoautora img {
     width: 500px;
     height: 500px;
-    justify-content:left;
     border-radius: 5%;
-    margin-top: 8em;
     margin-left: 80px;
-
+    object-fit: cover;
 }
 
+/* Estilos para el texto */
 .infoautora {
     width: 600px;
-    height: 600px;
-    justify-content:right;
+    height: auto;
     border-radius: 5%;
-    margin-top: 2em;
     margin-left: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.infoautora h1{
+.infoautora h1 {
     font-size: 40px;
     text-align: center;
     color: #BD7F22;
     font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    align-items: center;
-    align-content: center;
-    margin-left: 2em;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    margin: 0 0 1em 0;
+}
+
+.infoautora h2, .infoautora h3 {
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    margin: 0 0 1em 0;
 }
 
 .infoautora h2 {
-    font-size: 20px;
-    text-align: justify;
     color: white;
-    font-weight: 400;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    margin-left: 4em;
 }
-   
+
 .infoautora h3 {
-    font-size: 20px;
-    text-align: justify;
     color: #BD7F22;
-    font-weight: 400;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    margin-left: 4em;
 }
+
+/* Media Query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    .presentacion {
+        flex-direction: column;
+        height: auto;
+        padding: 2em 1em;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5em;
+    }
+
+    .fotoautora img {
+        width: 80vw; /* Ancho relativo al viewport */
+        height: auto; /* Mantener proporción */
+        margin-left: 0;
+        border-radius: 10px;
+    }
+
+    .infoautora {
+        width: 90vw;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .infoautora h2, .infoautora h3 {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
  /*presentacion del trabajo*/
 
  .presentaciontrabajo {
