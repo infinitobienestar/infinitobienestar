@@ -1,0 +1,118 @@
+.body{
+    width:100%;
+    height: 100%;
+    background-color:black;
+}
+
+.inicio-asesoria{
+    width:100%;
+    height: 800px;
+    background-color:black;
+}
+
+.inicio-asesoria img{
+    width:100%;
+    height: 600px;
+    display: flex;
+}
+
+.tituloasesorias{
+    display:flex;
+    align-items: center;
+    color: #BD7F22;
+    justify-content: center;   
+    align-items: center; 
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
+    margin-top:0%;
+    padding: 0%;
+}
+
+.catalogoasesorias {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* ahora va en columna */
+    gap: 2rem; /* espacio entre bloques */
+    padding: 2rem 0;
+}
+
+/* Imagen arriba, texto abajo */
+.catalogoasesorias {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* cada bloque uno debajo del otro */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Bloques generales: oraculo, entrenamiento, reflexion */
+.oraculo2,
+.entrenamientoa2,
+.reflexion {
+    display: flex;
+    flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* En móviles, que se pongan en columna */
+@media (max-width: 768px) {
+    .oraculo2,
+    .entrenamientoa2,
+    .reflexion {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Imágenes */
+.oraculo2-lado1 img,
+.entrenamientoa2-lado1 img,
+.reflexion2-lado1 img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+/* Texto */
+.oraculo2-lado2,
+.entrenamientoa2-lado2,
+.reflexion2-lado2 {
+    flex: 1;
+}
+
+/* Títulos */
+.oraculo2-lado2 h1,
+.entrenamientoa2-lado2 h1,
+.reflexion2-lado2 h1 {
+    color: #BD7F22;
+    font-size: 60px;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    margin: 0.5em 0;
+}
+
+/* Subtítulos */
+.oraculo2-lado2 h2,
+.entrenamientoa2-lado2 h2,
+.reflexion2-lado2 h2 {
+    color: #BD7F22;
+    font-size: 30px;
+    font-style: oblique;
+    font-weight: 100;
+    margin: 0.5em 0;
+}
+
+/* Texto descriptivo */
+.oraculo2-lado2 h3,
+.entrenamientoa2-lado2 h3,
+.reflexion2-lado2 h3 {
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0.5em 0;
+}

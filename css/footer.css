@@ -1,0 +1,34 @@
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color:#BD7F22;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+        
+
+.footer img{
+    width: 30px;
+    height: 30px;   
+}
+
+
+.redes-sociales2 ul {
+    list-style-type: none;
+  
+}
+
+.redes-sociales2 li {
+    display: inline; 
+    
+}
+
+.red-social2 img {
+    width: 30px;
+    height: auto;
+    padding: 20px;
+    margin-left: 50px;
+ 
+}
