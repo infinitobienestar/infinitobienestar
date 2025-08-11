@@ -399,12 +399,19 @@ margin-top: 0;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative; /* Para posicionar hijos de forma relativa */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+
+/* Nuevo contenedor para imágenes con flex */
+.imagenes-container {
+    display: flex;
+    justify-content: flex-end; /* mueve imágenes a la derecha */
+    width: 100%;
 }
 
 .libros1 img,
@@ -414,7 +421,7 @@ margin-top: 0;
     border-radius: 50%;
     border: solid 3px #BD7F22;
     margin: 10px;
-    position: static; /* quitar absoluto para que fluya con flexbox */
+    /* no position static necesario */
 }
 
 .infolibros p {
@@ -447,11 +454,15 @@ margin-top: 0;
         height: auto; /* Que se adapte a contenido */
         padding: 10px;
     }
+    .imagenes-container {
+        justify-content: center; /* centrar imágenes en móvil */
+    }
     .libros1 img,
     .libros2 img {
         width: 150px;
         height: 150px;
-        margin: 5px;
+        margin: 5px auto; /* centrado horizontal */
+        display: block;
     }
     .infolibros p {
         font-size: 24px;
@@ -463,7 +474,6 @@ margin-top: 0;
         margin-top: 20px;
     }
 }
-
 
 /*presentacion*/
 
