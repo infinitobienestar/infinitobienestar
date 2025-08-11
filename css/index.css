@@ -724,3 +724,55 @@ margin-top: 0;
 .redes-sociales li:first-child .red-social img {
     margin-left: 0; /* Elimina el margen izquierdo de la primera imagen */
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contacto {
+        flex-direction: column; /* Apilar elementos verticalmente */
+        height: auto; /* Que la altura se ajuste al contenido */
+        padding: 20px 10px; /* Algo de espacio alrededor */
+    }
+
+    .fotocontacto img {
+        width: 80vw; /* Ancho relativo a la pantalla, para que no desborde */
+        height: auto; /* Mantener proporción */
+        margin-top: 2em;
+        margin-left: 0;
+        border-radius: 10px;
+    }
+
+    .infocontacto {
+        width: 90vw; /* Ancho casi completo en móviles */
+        height: auto; /* Ajustar altura al contenido */
+        margin-top: 1.5em;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .infocontacto h1 {
+        font-size: 40px;
+    }
+
+    .infocontacto h2 {
+        font-size: 24px;
+    }
+
+    .infocontacto h3 {
+        font-size: 16px;
+    }
+
+    .redes-sociales ul {
+        justify-content: center;
+        flex-wrap: wrap; /* Permitir que las redes sociales bajen si no caben en una línea */
+    }
+
+    .redes-sociales li {
+        margin: 5px 8px;
+    }
+
+    .red-social img {
+        width: 25px;
+        padding: 8px;
+    }
+}
+
