@@ -399,56 +399,71 @@ margin-top: 0;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    }
+    position: relative; /* Para posicionar hijos de forma relativa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-.libros1 img{
+.libros1 img,
+.libros2 img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    position:absolute;
-    top: 4435px;
-    left: 780px;  
-    border-style: solid; 
-    border-color: #BD7F22;
+    border: solid 3px #BD7F22;
+    margin: 10px;
+    position: static; /* quitar absoluto para que fluya con flexbox */
 }
 
-.libros2 img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    position:absolute;
-    top: 4435px;
-    left: 1130px;  
-    border-style: solid; 
-    border-color: #BD7F22; 
-}
-.infolibros p{
-     font-size: 40px;
-     color:#C4BAA6;
-     background: none;
-     justify-content:right;
-     display: flex;
-     margin-top:0;
-     margin-right:400px;
+.infolibros p {
+    font-size: 40px;
+    color: #C4BAA6;
+    background: none;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .comprar {
-    margin-top: 500px;
-    padding: 10px;
-    background-color:#BD7F22;
+    padding: 10px 20px;
+    background-color: #BD7F22;
     color: white;
     cursor: pointer;
-    display: inline-block;
     border-radius: 10%;
-    margin-left: 1020px;
     font-size: 20px;
-   
-   
+    margin-top: 30px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 .comprar:hover {
-    background:black; /* Color de fondo al pasar sobre él */
-    color:#BD7F22/* Color de texto al pasar sobre él */
+    background: black;
+    color: #BD7F22;
 }
+
+/* MEDIA QUERY PARA MÓVILES */
+@media (max-width: 600px) {
+    .libros {
+        height: auto; /* Que se adapte a contenido */
+        padding: 10px;
+    }
+    .libros1 img,
+    .libros2 img {
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+    }
+    .infolibros p {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .comprar {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin-top: 20px;
+    }
+}
+
 
 /*presentacion*/
 
