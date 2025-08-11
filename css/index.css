@@ -429,11 +429,11 @@ margin-top: 0;
     color: #C4BAA6;
     background: none;
     text-align: center;
-    margin: 20px 0;
+    margin: 200px 100px ;
 }
 
 .comprar {
-    padding: 10px 20px;
+    padding: 100px 200px;
     background-color: #BD7F22;
     color: white;
     cursor: pointer;
