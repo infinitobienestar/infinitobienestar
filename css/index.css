@@ -154,11 +154,11 @@ margin-left: 100px;
 }
 /*Asesorías*/
 .asesorias{
-width: 100%;
-height: 1000px;
-background-color: black;
-display:inline-block;
-margin-top: 0;
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    display: inline-block;
+    margin-top: 0;
 }
 
 .titulo{
@@ -166,9 +166,9 @@ margin-top: 0;
     text-align: center;
     color: #BD7F22;
     font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif; 
     background-color: black;
-    margin-top: o;
+    margin-top: 0;
 }
 
 .asesorias-container {
@@ -176,28 +176,28 @@ margin-top: 0;
     height: 600px;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: black;
-     }
+}
 
-
-.asesorias-container img{
+.asesorias-container img {
     width: 300px;
     height: 300px;
     display: block;
-    margin:0;
+    margin: 0;
 }
 
-.oraculo-info{
+.oraculo-info {
     background-color: white;
     height: 180px;
     width: 300px;
 }
-.oraculo-info h1{
+
+.oraculo-info h1 {
     font-size: 20px;
     text-align: center;
     color: #BD7F22;
     font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    margin-top: 20px ;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif; 
+    margin-top: 20px;
     align-items: center;
     align-content: center;
 }
@@ -207,7 +207,7 @@ margin-top: 0;
     text-align: center;
     color: #BD7F22;
     font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
 }
 
 .asesoria1, .asesoria2, .asesoria3 {
@@ -217,13 +217,11 @@ margin-top: 0;
     justify-content: center;
     border-color:  #BD7F22;
     background-color: black;
-   
-
 }
+
 .asesoria1 .oraculo-info, .asesoria2 .oraculo-info, .asesoria3 .oraculo-info {
     text-align: center; /* Centers the text within each container */
 }
-
 
 @media (max-width: 768px) {
     .titulo {
@@ -262,13 +260,12 @@ margin-top: 0;
 }
 
 /* Enlace dentro del botón */
-.agendar-asesoria a {
+.agendar-asesoria a,
+.agendar-asesoria a:visited,
+.agendar-asesoria a:hover,
+.agendar-asesoria a:active {
     color: inherit;          /* Usa el color del contenedor */
     text-decoration: none;   /* Quita el subrayado */
-}
-
-.agendar-asesoria a:hover {
-    color: inherit;          /* Mantiene el color del contenedor en hover */
 }
 
 /* Botones con otras clases */
@@ -286,8 +283,6 @@ margin-top: 0;
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 
-    
-    
     
 
 /*Cursos*/
