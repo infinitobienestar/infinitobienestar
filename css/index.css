@@ -27,12 +27,6 @@ body {
     overflow: visible; /* scroll normal vertical */
 }
 
-/* Contenedor principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 /* Media query para móviles */
 @media (max-width: 600px) {
