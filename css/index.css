@@ -539,60 +539,94 @@ margin-left: 100px;
 
 .libros {
     width: 100%;
-    height: 800px;
+    min-height: 800px;
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    color: #C4BAA6;
+}
 
-.libros1 img{
+.libros-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Para que baje si no cabe en horizontal */
+    margin-bottom: 40px;
+}
+
+.libros-imagenes img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    position:absolute;
-    top: 4435px;
-    left: 780px;  
-    border-style: solid; 
-    border-color: #BD7F22;
+    border: 3px solid #BD7F22;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.libros2 img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    position:absolute;
-    top: 4435px;
-    left: 1130px;  
-    border-style: solid; 
-    border-color: #BD7F22; 
+.libros-imagenes img:hover {
+    transform: scale(1.05);
 }
-.infolibros p{
-     font-size: 40px;
-     color:#C4BAA6;
-     background: none;
-     justify-content:right;
-     display: flex;
-     margin-top:0;
-     margin-right:400px;
+
+.infolibros p {
+    font-size: 40px;
+    max-width: 800px;
+    text-align: right;
+    margin: 0 auto 40px auto;
 }
 
 .comprar {
-    margin-top: 500px;
-    padding: 10px;
-    background-color:#BD7F22;
+    padding: 15px 30px;
+    background-color: #BD7F22;
     color: white;
     cursor: pointer;
-    display: inline-block;
-    border-radius: 10%;
-    margin-left: 1020px;
-    font-size: 20px;
-   
-   
+    border-radius: 12px;
+    font-size: 22px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .comprar:hover {
-    background:black; /* Color de fondo al pasar sobre él */
-    color:#BD7F22/* Color de texto al pasar sobre él */
+    background-color: black;
+    color: #BD7F22;
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+@media (max-width: 900px) {
+    .libros-imagenes img {
+        width: 180px;
+        height: 180px;
+    }
+    .infolibros p {
+        font-size: 28px;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .comprar {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .libros-imagenes {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .libros-imagenes img {
+        width: 150px;
+        height: 150px;
+    }
+    .infolibros p {
+        font-size: 22px;
+    }
 }
 
 /*presentacion*/
