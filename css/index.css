@@ -299,18 +299,16 @@ margin-left: 100px;
     }
 }
 
-/*Cursos*/
-
+/* Cursos - Escritorio */
 
 .cursos {
     width: 100%;
-    height: 1000px;
+    height: auto; /* para que no tape nada en móvil */
     text-align: center;
-    margin: 0px;
-    padding-top: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     background-color: black;
-    display:inline-block;
+    display: inline-block;
     float: none;
     box-sizing: border-box;
 }
@@ -325,13 +323,12 @@ margin-left: 100px;
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    display: flex;
     width: 100%;
 }
 
 .curso {
-    min-width:auto;
-    display:inline-block;
+    min-width: auto;
+    display: inline-block;
     padding: 80px;
     box-sizing: border-box;
 }
@@ -343,7 +340,7 @@ margin-left: 100px;
     border-style: solid;
     border-color: #BD7F22;
     border-width: 5px;
-    margin-top: 0%;
+    margin-top: 0;
 }
 
 .cursos-info {
@@ -352,41 +349,44 @@ margin-left: 100px;
     align-items: center;
     justify-content: center;
     display: inline-block;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 .cursos-info h1 {
     font-size: 20px;
-    margin-top: 0%;
-    color:#c18328;
+    margin-top: 0;
+    color: #c18328;
     justify-content: center;
-    padding: 40px;  
+    padding: 40px;
 }
 
 .agendar {
     margin-top: 10px;
     padding: 10px;
-    background-color:#BD7F22;
+    background-color: #BD7F22;
     color: white;
     cursor: pointer;
     display: inline-block;
     border-radius: 10%;
 }
+
 .agendar:hover {
-    background:white; /* Color de fondo al pasar sobre él */
-    color:black /* Color de texto al pasar sobre él */
+    background: white; /* Color de fondo al pasar sobre él */
+    color: black; /* Color de texto al pasar sobre él */
 }
 
 .agendar a {
-    color: inherit;          
-    text-decoration: none;   
+    color: inherit;
+    text-decoration: none;
 }
 
 .agendar a:hover {
-    color: inherit;          
+    color: inherit;
     text-decoration: none;
 }
-.prev, .next {
+
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -395,6 +395,8 @@ margin-left: 100px;
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 .prev {
@@ -410,55 +412,32 @@ margin-left: 100px;
     cursor: not-allowed;
 }
 
+/* Media Query para móvil */
 
 @media (max-width: 768px) {
 
-    /* Ajustes para asesorías (igual que antes) */
-    .asesorias-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 10px;
-        height: auto;
+    .cursos {
+        height: auto; /* para que no tape otros elementos */
     }
 
-    .asesoria1, .asesoria2, .asesoria3 {
-        padding: 10px;
-    }
-
-    .oraculo-info {
-        width: 90%;
-        margin: 0 auto;
-        height: auto;
-        padding: 10px;
-    }
-
-    .asesorias-container img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* -------- CURSOS -------- */
-
-    /* Carousel container: mostrar solo 1 curso, ocultar overflow */
     .carousel-container {
         width: 100%;
         overflow: hidden;
-        position: relative; /* necesario para botones */
+        position: relative;
         margin-bottom: 30px;
     }
 
-    /* Carousel: usar flex para alinear horizontalmente */
     .carousel {
         display: flex;
         transition: transform 0.3s ease-in-out;
         width: 100%;
     }
 
-    /* Cada curso ocupa 100% ancho del contenedor */
     .curso {
-        min-width: 100%;  /* Forzar que cada curso ocupe todo el ancho */
+        min-width: 100%; /* cada curso ocupa todo el ancho */
         box-sizing: border-box;
         padding: 0 10px;
+        display: inline-block;
     }
 
     .cursos-info {
@@ -491,8 +470,8 @@ margin-left: 100px;
         color: black;
     }
 
-    /* Botones prev y next en posición relativa y visibles */
-    .prev, .next {
+    .prev,
+    .next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
