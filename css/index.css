@@ -5,87 +5,61 @@
     background-color:black;
     overflow-x: hidden;
 }
-/*inicio*/
-
 .inicio {
-width: 100%;
-height: 84em;
-background-color: black;
-background-image: url("../imagenes/infinito1.jpeg");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-justify-content: center;
-align-items:center;
-position: relative;
-overflow-x: hidden;
+  width: 100%;
+  height: 84em;
+  background-color: black;
+  background-image: url("../imagenes/infinito1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;              /* agrego flex para que funcione */
+  flex-direction: column;     /* columnas para que h1 y h2 se apilen */
+  justify-content: center;    /* centrar verticalmente */
+  align-items: center;        /* centrar horizontalmente */
+  position: relative;
+  overflow-x: hidden;
+  text-align: center;         /* centrar texto */
+  padding: 2em;               /* para que no quede pegado */
 }
 
-.inicio h1{
-font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-font-size: 100px;
-display: inline-block;
-align-items: center;
-text-align: center;
-color: #BD7F22;
-margin-top: 280px;
-margin-left: 100px;
+.inicio h1 {
+  font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+  font-size: 6rem;           /* usa rem para escalabilidad */
+  color: #BD7F22;
+  margin: 0.2em 0;
 }
 
-.inicio h2{
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-    font-size: 60px;
-    display: inline-block;
-    text-align: left;
-    color: #BD7F22;
-    margin-top: 420px;
-    margin-left: 400px;
-   
-    }
+.inicio h2 {
+  font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+  color: #BD7F22;
+  margin: 0.2em 0;
+}
+
 /* Media queries para pantallas pequeñas */
 
-/* Ajustes para pantallas de tamaño medio */
 @media (max-width: 768px) {
-    .inicio {
-        /* Centrar el contenido vertical y horizontalmente en pantallas pequeñas */
-        justify-content: center;
-        align-items: center;
-        text-align: center; /* Centrar texto en pantallas pequeñas */
-    }
-
-    .inicio h1 {
-        position: relative;
-        font-size: 70px; /* Reducir tamaño de fuente en pantallas pequeñas */
-        margin: 450px auto auto; /* Centrarse horizontalmente y ajustar margen superior */
-    }
-
-    .inicio h2 {
-        position: relative;
-        font-size: 70px; /* Reducir tamaño de fuente en pantallas pequeñas */
-        margin: 10px auto auto; /* Centrarse horizontalmente y ajustar margen superior */
-        text-align: center;
-    }
+  .inicio {
+    height: auto;              /* que se ajuste al contenido */
+    padding: 1em;
+  }
+  .inicio h1 {
+    font-size: 4rem;
+  }
+  .inicio h2 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .inicio {
-        /* Ajustar altura al contenido */
-        height: auto;
-        padding: 20px; /* Relleno para evitar que el contenido quede pegado a los bordes */
-    }
-
-    .inicio h1 {
-        font-size: 10px; /* Reducir tamaño de fuente en pantallas muy pequeñas */
-        margin: 20px auto; /* Ajustar margen superior y centrar horizontalmente */
-    }
-
-    .inicio h2 {
-        font-size: 10px; /* Reducir tamaño de fuente en pantallas muy pequeñas */
-        margin: 10px auto; /* Ajustar margen superior y centrar horizontalmente */
-    }
+  .inicio h1 {
+    font-size: 2.5rem;
+  }
+  .inicio h2 {
+    font-size: 1.5rem;
+  }
 }
-
-
 
 /* bienvenido*/
 
