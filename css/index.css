@@ -282,7 +282,49 @@ margin-left: 100px;
     cursor: pointer;          /* Cambia el cursor al pasar sobre él */
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 8vw; /* Fuente más flexible y pequeña */
+    }
 
+    .asesorias-container {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        height: auto; /* que crezca según contenido */
+        gap: 15px; /* espacio entre elementos */
+        padding: 10px;
+    }
+
+    .asesoria1, .asesoria2, .asesoria3 {
+        padding: 10px; /* menos padding para móviles */
+    }
+
+    .oraculo-info {
+        max-width: 100%; /* ancho completo para adaptarse */
+        height: auto;    /* que se ajuste */
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .oraculo-info h1,
+    .oraculo-info h2 {
+        font-size: 1.2rem; /* texto legible */
+        margin-top: 10px;
+    }
+
+    .asesorias-container img {
+        max-width: 100%; /* imágenes responsivas */
+        height: auto;
+    }
+
+    .agendar-asesoria {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        border-radius: 12%;
+        margin-top: 15px;
+        display: block;
+        width: fit-content;
+    }
+}
     
 
 /*Cursos*/
