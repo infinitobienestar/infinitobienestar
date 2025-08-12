@@ -6,7 +6,6 @@
     background-color:black;
     overflow-x: hidden;
 }
-
 /* Media query para móviles */
 @media (max-width: 600px) {
     body {
