@@ -545,25 +545,13 @@ margin-left: 100px;
 
 /*libros*/
 
-.libros {
-    position: relative; /* posiciona los elementos absolute dentro */
-    width: 100%;
-    height: 800px;
-    background-color: black;
-    background-image: url("../imagenes/infinito.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 40%; /* muestra más de la imagen */
-    overflow: hidden;
-    color: white; /* para que el link herede este color */
-}
-
+/* Estilos para escritorio (web) - posición absoluta */
 .libros1 img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     position: absolute;
-    top: 140px; /* antes 150px, subido 10px */
+    top: 140px;
     left: 780px;
     border: 3px solid #BD7F22;
     object-fit: cover;
@@ -574,97 +562,21 @@ margin-left: 100px;
     height: 250px;
     border-radius: 50%;
     position: absolute;
-    top: 140px; /* antes 150px */
+    top: 140px;
     left: 1130px;
     border: 3px solid #BD7F22;
     object-fit: cover;
 }
 
-.infolibros p {
-    font-size: 40px;
-    color: #C4BAA6;
-    background: none;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 0;
-    margin-right: 400px;
-}
-
-.comprar {
-    margin-top: 500px;
-    padding: 10px;
-    background-color: #BD7F22;
-    color: inherit; /* hereda el color del padre */
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 10%;
-    margin-left: 1020px;
-    font-size: 20px;
-    text-decoration: none; /* quita subrayado */
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.comprar:link,
-.comprar:visited,
-.comprar:hover,
-.comprar:active {
-    color: inherit;
-    text-decoration: none;
-}
-
-.comprar:hover {
-    background: black;
-    color: #BD7F22;
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-    .libros {
-        height: 600px;
-    }
-    .libros1 img {
-        width: 180px;
-        height: 180px;
-        top: 100px; /* ajusta en pantallas medianas */
-        right: 600px;
-    }
-    .libros2 img {
-        width: 180px;
-        height: 180px;
-        top: 100px;
-        right: 900px;
-    }
-    .comprar {
-        margin-left: 700px;
-        font-size: 18px;
-    }
-}
-
+/* Media Query para pantallas móviles */
 @media (max-width: 700px) {
-    .libros {
-        height: 500px;
-        background-size: cover;
-        background-position: center;
-    }
     .libros1 img,
     .libros2 img {
-        position: static;
-        margin: 30px auto;
+        position: static; /* quita absolute */
         display: block;
         width: 150px;
         height: 150px;
-    }
-    .infolibros p {
-        text-align: center;
-        margin-right: 0;
-        font-size: 24px;
-    }
-    .comprar {
-        margin-left: auto;
-        margin-top: 30px;
-        font-size: 16px;
-        display: block;
+        margin: 30px 0 30px auto; /* margen para alinear a la derecha */
     }
 }
 
