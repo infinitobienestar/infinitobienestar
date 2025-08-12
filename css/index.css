@@ -9,12 +9,6 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-/* Opcional para contenido: */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 /* Media query para móviles */
 @media (max-width: 600px) {
