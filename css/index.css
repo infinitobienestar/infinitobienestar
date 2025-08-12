@@ -298,87 +298,6 @@ margin-left: 100px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* ===== MEDIA QUERY MÓVIL ===== */
-
-@media (max-width: 768px) {
-    /* Cursos */
-    .cursos {
-        height: auto;
-        position: relative;
-        z-index: 1;
-    }
-
-    .carousel-container {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        margin-bottom: 30px;
-    }
-
-    .carousel {
-        display: flex;
-        transition: transform 0.3s ease-in-out;
-        width: 100%;
-    }
-
-    .curso {
-        min-width: 100%;
-        box-sizing: border-box;
-        padding: 0 10px;
-        display: inline-block;
-    }
-
-    .cursos-info {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .cursos-info h1 {
-        font-size: 1.3rem;
-        padding: 10px 0;
-    }
-
-    .agendar {
-        display: inline-block;
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        border-radius: 12%;
-        margin-top: 15px;
-        background-color: #BD7F22;
-        color: white;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    .agendar:hover {
-        background-color: white;
-        color: black;
-    }
-
-    .prev,
-    .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(189, 127, 34, 0.8);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-        z-index: 10;
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
 
     /* Asesorías */
     .asesorias {
@@ -534,19 +453,101 @@ margin-left: 100px;
     cursor: not-allowed;
 }
 
+/* ===== MEDIA QUERY MÓVIL ===== */
+
+@media (max-width: 768px) {
+    /* Cursos */
+    .cursos {
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .curso {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        display: inline-block;
+    }
+
+    .cursos-info {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .cursos-info h1 {
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+
+    .agendar {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        border-radius: 12%;
+        margin-top: 15px;
+        background-color: #BD7F22;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .agendar:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(189, 127, 34, 0.8);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
 
 /*libros*/
 
 .libros {
-    position: relative; /* para que las imágenes absolute se posicionen relativo a este */
+    position: relative; /* posiciona los elementos absolute dentro */
     width: 100%;
     height: 800px;
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
-    background-size: cover; /* mantén cover para llenar */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center 40%; /* muestra más de la imagen */
     overflow: hidden;
+    color: white; /* para que el link herede este color */
 }
 
 .libros1 img {
@@ -554,8 +555,8 @@ margin-left: 100px;
     height: 250px;
     border-radius: 50%;
     position: absolute;
-    top: 150px; /* ajusta para subir */
-    left: 780px;  
+    top: 140px; /* antes 150px, subido 10px */
+    left: 780px;
     border: 3px solid #BD7F22;
     object-fit: cover;
 }
@@ -565,8 +566,8 @@ margin-left: 100px;
     height: 250px;
     border-radius: 50%;
     position: absolute;
-    top: 150px; /* igual que la otra */
-    left: 1130px;  
+    top: 140px; /* antes 150px */
+    left: 1130px;
     border: 3px solid #BD7F22;
     object-fit: cover;
 }
@@ -585,24 +586,31 @@ margin-left: 100px;
     margin-top: 500px;
     padding: 10px;
     background-color: #BD7F22;
-    color: white !important;
+    color: inherit; /* hereda el color del padre */
     cursor: pointer;
     display: inline-block;
     border-radius: 10%;
     margin-left: 1020px;
     font-size: 20px;
-    text-decoration: none !important;
+    text-decoration: none; /* quita subrayado */
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.comprar:hover {
-    background: black;
-    color: #BD7F22 !important;
+.comprar:link,
+.comprar:visited,
+.comprar:hover,
+.comprar:active {
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Media Queries para adaptar en pantallas más chicas */
+.comprar:hover {
+    background: black;
+    color: #BD7F22;
+}
 
+/* Media Queries */
 @media (max-width: 1200px) {
     .libros {
         height: 600px;
@@ -610,14 +618,14 @@ margin-left: 100px;
     .libros1 img {
         width: 180px;
         height: 180px;
-        top: 120px;
-        left: 600px;
+        top: 100px; /* ajusta en pantallas medianas */
+        right: 600px;
     }
     .libros2 img {
         width: 180px;
         height: 180px;
-        top: 120px;
-        left: 900px;
+        top: 100px;
+        right: 900px;
     }
     .comprar {
         margin-left: 700px;
@@ -629,11 +637,12 @@ margin-left: 100px;
     .libros {
         height: 500px;
         background-size: cover;
+        background-position: center;
     }
     .libros1 img,
     .libros2 img {
         position: static;
-        margin: 10px auto;
+        margin: 30px auto;
         display: block;
         width: 150px;
         height: 150px;
