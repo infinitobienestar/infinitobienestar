@@ -152,14 +152,14 @@ margin-left: 100px;
         margin-right: 1em; /* Reducir margen */
     }
 }
-/* Asesorías - Escritorio */
+/* ===== ASESORÍAS ===== */
+
 .asesorias {
     width: 100%;
     height: auto;
     background-color: black;
     display: inline-block;
     margin-top: 0;
-    /* Sin position ni z-index aquí */
 }
 
 .titulo {
@@ -211,7 +211,9 @@ margin-left: 100px;
     font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
 }
 
-.asesoria1, .asesoria2, .asesoria3 {
+.asesoria1,
+.asesoria2,
+.asesoria3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,11 +222,13 @@ margin-left: 100px;
     background-color: black;
 }
 
-.asesoria1 .oraculo-info, .asesoria2 .oraculo-info, .asesoria3 .oraculo-info {
+.asesoria1 .oraculo-info,
+.asesoria2 .oraculo-info,
+.asesoria3 .oraculo-info {
     text-align: center;
 }
 
-/* botón de agendar */
+/* Botón agendar asesoría */
 .agendar-asesoria {
     margin-top: 10px;
     padding: 10px;
@@ -249,7 +253,6 @@ margin-left: 100px;
     text-decoration: none;
 }
 
-/* Otros botones */
 .agendar,
 .asesoria1,
 .asesoria2,
@@ -264,17 +267,93 @@ margin-left: 100px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Móvil */
+/* ===== MEDIA QUERY MÓVIL ===== */
+
 @media (max-width: 768px) {
-    .asesorias {
-        height: auto; /* para que ajuste contenido y no tape */
+    /* Cursos */
+    .cursos {
+        height: auto;
         position: relative;
-        z-index: 2;
-        margin-bottom: 30px; /* espacio para no tapar cursos */
+        z-index: 1;
     }
 
-    .titulo p {
-        font-size: 8vw;
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .curso {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        display: inline-block;
+    }
+
+    .cursos-info {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .cursos-info h1 {
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+
+    .agendar {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        border-radius: 12%;
+        margin-top: 15px;
+        background-color: #BD7F22;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .agendar:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(189, 127, 34, 0.8);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    /* Asesorías */
+    .asesorias {
+        position: relative;
+        z-index: 2;
+        height: auto;
     }
 
     .asesorias-container {
@@ -284,7 +363,9 @@ margin-left: 100px;
         padding: 10px;
     }
 
-    .asesoria1, .asesoria2, .asesoria3 {
+    .asesoria1,
+    .asesoria2,
+    .asesoria3 {
         padding: 10px;
     }
 
@@ -308,10 +389,11 @@ margin-left: 100px;
 }
 
 
-/* Cursos - Escritorio */
+/* ===== CURSOS ===== */
+
 .cursos {
     width: 100%;
-    height: auto;
+    height: auto; /* para que no tape nada en móvil */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -319,7 +401,6 @@ margin-left: 100px;
     display: inline-block;
     float: none;
     box-sizing: border-box;
-    /* Sin position ni z-index aquí */
 }
 
 .carousel-container {
@@ -421,88 +502,6 @@ margin-left: 100px;
     cursor: not-allowed;
 }
 
-/* Móvil */
-@media (max-width: 768px) {
-    .cursos {
-        height: auto;
-        position: relative;
-        z-index: 1;
-        margin-bottom: 30px; /* espacio para no tapar otras secciones */
-    }
-    
-
-    .carousel-container {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        margin-bottom: 30px;
-    }
-
-    .carousel {
-        display: flex;
-        transition: transform 0.3s ease-in-out;
-        width: 100%;
-    }
-
-    .curso {
-        min-width: 100%;
-        box-sizing: border-box;
-        padding: 0 10px;
-        display: inline-block;
-    }
-
-    .cursos-info {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .cursos-info h1 {
-        font-size: 1.3rem;
-        padding: 10px 0;
-    }
-
-    .agendar {
-        display: inline-block;
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        border-radius: 12%;
-        margin-top: 15px;
-        background-color: #BD7F22;
-        color: white;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    .agendar:hover {
-        background-color: white;
-        color: black;
-    }
-
-    .prev,
-    .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(189, 127, 34, 0.8);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-        z-index: 10;
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
-}
 
 /*libros*/
 
