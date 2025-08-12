@@ -197,6 +197,7 @@ margin-left: 100px;
     background-color: black;
     display: inline-block;
     margin-top: 0;
+    overflow: visible
 }
 
 .titulo {
