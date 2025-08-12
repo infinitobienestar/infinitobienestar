@@ -22,10 +22,6 @@ html, body {
         width: 100%;
     }
 }
-/* Evitamos que el contenido se corte */
-body {
-    overflow: visible; /* scroll normal vertical */
-}
 
 
 /* Media query para móviles */
