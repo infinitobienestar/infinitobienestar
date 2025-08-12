@@ -20,7 +20,7 @@
     padding: 20px;
 }
 
-/* Media query para móviles */
+/* Media query para móviles
 @media (max-width: 600px) {
     body {
         padding: 15px;
@@ -33,7 +33,7 @@
         width: 100%;
         max-width: 100%;
     }
-}
+}*/
 
 
 .inicio {
