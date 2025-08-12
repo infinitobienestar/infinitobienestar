@@ -223,24 +223,6 @@ margin-left: 100px;
     text-align: center; /* Centers the text within each container */
 }
 
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 8vw; /* Tamaño de fuente más grande para pantallas pequeñas */
-    }
-
-    .asesorias-container {
-        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
-    }
-
-    .asesoria1, .asesoria2, .asesoria3 {
-        padding: 10px; /* Espaciado reducido */
-    }
-
-    .oraculo-info h1,
-    .oraculo-info h2 {
-        font-size: 1.2rem; /* Tamaño de fuente reducido */
-    }
-}
 
 /*boton de agendar*/
 .agendar-asesoria {
@@ -288,9 +270,9 @@ margin-left: 100px;
     }
 
     .asesorias-container {
-        grid-template-columns: 1fr; /* Una columna en móviles */
-        height: auto; /* que crezca según contenido */
-        gap: 15px; /* espacio entre elementos */
+        grid-template-columns: 1fr; /* Cambia el grid a 1 columna para móviles */
+        height: auto;
+        gap: 15px;
         padding: 10px;
     }
 
@@ -300,7 +282,7 @@ margin-left: 100px;
 
     .oraculo-info {
         max-width: 100%; /* ancho completo para adaptarse */
-        height: auto;    /* que se ajuste */
+        height: auto;
         padding: 10px;
         margin: 0 auto;
     }
@@ -325,7 +307,6 @@ margin-left: 100px;
         width: fit-content;
     }
 }
-    
 
 /*Cursos*/
 
