@@ -538,93 +538,116 @@ margin-left: 100px;
 /*libros*/
 
 .libros {
+    position: relative; /* para que las imágenes absolute se posicionen relativo a este */
     width: 100%;
-    padding: 20px 20px 40px 20px;
+    height: 800px;
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
-    background-size: cover;
+    background-size: cover; /* mantén cover para llenar */
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-    color: #C4BAA6;
+    background-position: center center;
+    overflow: hidden;
 }
 
-.libros1 img,
-.libros2 img {
-    position: static; /* que no estén absolute para subirlos */
-    margin: 10px 30px 20px 30px;
+.libros1 img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    position: absolute;
+    top: 150px; /* ajusta para subir */
+    left: 780px;  
     border: 3px solid #BD7F22;
     object-fit: cover;
-    transition: transform 0.3s ease;
-    display: inline-block;
 }
 
-.libros1 img:hover,
-.libros2 img:hover {
-    transform: scale(1.05);
+.libros2 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    top: 150px; /* igual que la otra */
+    left: 1130px;  
+    border: 3px solid #BD7F22;
+    object-fit: cover;
 }
 
 .infolibros p {
     font-size: 40px;
-    max-width: 800px;
-    text-align: right;
-    margin: 0 auto 40px auto;
+    color: #C4BAA6;
+    background: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    margin-right: 400px;
 }
 
 .comprar {
-    color: white !important;
-    text-decoration: none !important;
-    padding: 15px 30px;
+    margin-top: 500px;
+    padding: 10px;
     background-color: #BD7F22;
-    border-radius: 12px;
-    font-size: 22px;
+    color: white !important;
     cursor: pointer;
+    display: inline-block;
+    border-radius: 10%;
+    margin-left: 1020px;
+    font-size: 20px;
+    text-decoration: none !important;
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: inline-block;
 }
 
 .comprar:hover {
-    background-color: black;
+    background: black;
     color: #BD7F22 !important;
 }
 
-/* Media Queries para pantallas más pequeñas */
+/* Media Queries para adaptar en pantallas más chicas */
 
-@media (max-width: 900px) {
-    .libros1 img,
+@media (max-width: 1200px) {
+    .libros {
+        height: 600px;
+    }
+    .libros1 img {
+        width: 180px;
+        height: 180px;
+        top: 120px;
+        left: 600px;
+    }
     .libros2 img {
         width: 180px;
         height: 180px;
-        margin: 10px 20px 15px 20px;
-    }
-    .infolibros p {
-        font-size: 28px;
-        text-align: center;
-        max-width: 100%;
-        margin-bottom: 30px;
+        top: 120px;
+        left: 900px;
     }
     .comprar {
+        margin-left: 700px;
         font-size: 18px;
-        padding: 12px 24px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
+    .libros {
+        height: 500px;
+        background-size: cover;
+    }
     .libros1 img,
     .libros2 img {
+        position: static;
+        margin: 10px auto;
+        display: block;
         width: 150px;
         height: 150px;
-        margin: 10px auto 15px auto;
-        display: block;
     }
     .infolibros p {
-        font-size: 22px;
+        text-align: center;
+        margin-right: 0;
+        font-size: 24px;
+    }
+    .comprar {
+        margin-left: auto;
+        margin-top: 30px;
+        font-size: 16px;
+        display: block;
     }
 }
 
