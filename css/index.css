@@ -265,46 +265,37 @@ margin-left: 100px;
     transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 @media (max-width: 768px) {
-    .titulo {
-        font-size: 8vw; /* Fuente más flexible y pequeña */
+    .titulo p {
+        font-size: 8vw;
     }
 
     .asesorias-container {
-        grid-template-columns: 1fr; /* Cambia el grid a 1 columna para móviles */
+        grid-template-columns: 1fr;
         height: auto;
-        gap: 15px;
+        gap: 20px;
         padding: 10px;
     }
 
     .asesoria1, .asesoria2, .asesoria3 {
-        padding: 10px; /* menos padding para móviles */
+        padding: 10px;
     }
 
     .oraculo-info {
-        max-width: 100%; /* ancho completo para adaptarse */
+        width: 90%;
+        margin: 0 auto;
         height: auto;
         padding: 10px;
-        margin: 0 auto;
     }
 
     .oraculo-info h1,
     .oraculo-info h2 {
-        font-size: 1.2rem; /* texto legible */
+        font-size: 1.2rem;
         margin-top: 10px;
     }
 
     .asesorias-container img {
-        max-width: 100%; /* imágenes responsivas */
+        width: 100%;
         height: auto;
-    }
-
-    .agendar-asesoria {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        border-radius: 12%;
-        margin-top: 15px;
-        display: block;
-        width: fit-content;
     }
 }
 
@@ -405,6 +396,71 @@ margin-left: 100px;
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-container,
+    .carousel {
+        width: 100%;
+        overflow: visible;
+        position: static !important;
+        height: auto !important;
+        margin-bottom: 30px;
+        text-align: center; /* para centrar botones */
+    }
+
+    .curso {
+        width: 90%;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .cursos-info {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .cursos-info h1 {
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+
+    .agendar {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        border-radius: 12%;
+        margin-top: 15px;
+        background-color: #BD7F22;
+        color: white;
+        cursor: pointer;
+    }
+
+    .agendar:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* Botones de navegación */
+    .prev, .next {
+        position: static !important;
+        display: inline-block;
+        margin: 10px 15px;
+        padding: 10px 20px;
+        background-color: #BD7F22;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
 }
 
 /*libros*/
