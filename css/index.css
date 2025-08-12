@@ -5,6 +5,16 @@
     background-color:black;
     overflow-x: hidden;
 }
+
+@media (max-width: 600px) {
+    body {
+        /* Por ejemplo, ajustar altura si es necesario */
+        height: auto; /* para que el body se adapte al contenido */
+        
+        /* Podrías cambiar el color o agregar padding para móviles */
+        padding: 10px;
+    }
+}
 inicio {
 width: 100%;
 height: 84em;
