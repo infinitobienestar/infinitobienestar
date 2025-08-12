@@ -3,8 +3,11 @@ let currentIndex = 0;
 const courses = document.querySelectorAll('.curso');
 const totalCourses = courses.length;
 
-document.querySelector('.prev').addEventListener('click', showPrevCourse);
-document.querySelector('.next').addEventListener('click', showNextCourse);
+const prevButton = document.querySelector('.prev');  // Agregado
+const nextButton = document.querySelector('.next');  // Agregado
+
+prevButton.addEventListener('click', showPrevCourse);
+nextButton.addEventListener('click', showNextCourse);
 
 function updateCarousel() {
     const carousel = document.querySelector('.carousel');
@@ -31,5 +34,6 @@ function showNextCourse() {
         updateCarousel();
     }
 }
- // Initialize carousel
-        updateCarousel();
+
+// Initialize carousel
+updateCarousel();
