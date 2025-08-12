@@ -6,7 +6,7 @@ html, body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* solo si estás seguro */
+    /*overflow-x: hidden;*/ /* solo si estás seguro */
 }
 
 body {
