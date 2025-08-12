@@ -1,5 +1,5 @@
 
-html, body {
+.html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ html, body {
     /*overflow-x: hidden;*/ /* solo si estás seguro */
 }
 
-body {
+.body {
     min-height: 100vh; /* mejor usar vh que % */
 }
 
