@@ -45,7 +45,7 @@ margin-left: 100px;
 
 /* Media queries para pantallas pequeñas */
 
-@media (max-width: 768px) {
+
 @media (max-width: 768px) {
   .inicio {
     height: auto;
