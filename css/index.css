@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================
@@ -19,7 +20,7 @@ body {
     min-height: 100vh;
     background-color: black;
     background-image: url("../imagenes/infinito1.jpeg");
-    background-size: contain; /* Escalar completa */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -28,18 +29,15 @@ body {
     align-items: center;
     text-align: center;
     padding: 2em 1em;
+    transition: background-size 0.5s ease;
 }
 
-.inicio h1 {
-    font-size: clamp(2rem, 8vw, 100px);
-    color: #BD7F22;
-    margin: 0.5em 0;
+.inicio h1, .inicio h2 {
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.inicio h2 {
-    font-size: clamp(1.5rem, 6vw, 60px);
-    color: #BD7F22;
-    margin: 0.5em 0;
+.inicio h1:hover, .inicio h2:hover {
+    transform: scale(1.03);
 }
 
 /* ==========================
@@ -53,6 +51,7 @@ body {
     align-items: center;
     padding: 2em 1em;
     gap: 1.5em;
+    transition: all 0.4s ease;
 }
 
 .bienvenido .lado1 img {
@@ -60,12 +59,18 @@ body {
     max-width: 500px;
     border-radius: 15px;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.bienvenido .lado1 img:hover {
+    transform: scale(1.05);
 }
 
 .bienvenido .lado2 {
     font-size: clamp(1rem, 3vw, 2rem);
     text-align: center;
     color: #BD7F22;
+    transition: color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -82,6 +87,7 @@ body {
     width: 100%;
     background-color: black;
     padding: 3em 1em;
+    transition: padding 0.3s ease;
 }
 
 .titulo {
@@ -90,6 +96,7 @@ body {
     color: #BD7F22;
     font-weight: 100;
     margin-top: 0;
+    transition: color 0.3s ease;
 }
 
 .asesorias-container {
@@ -97,12 +104,18 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5em;
     margin-top: 2em;
+    transition: gap 0.3s ease;
 }
 
 .asesorias-container img {
     width: 100%;
     max-width: 300px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.asesorias-container img:hover {
+    transform: scale(1.05);
 }
 
 .oraculo-info {
@@ -111,13 +124,12 @@ body {
     text-align: center;
     width: 100%;
     max-width: 300px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.oraculo-info h1,
-.oraculo-info h2 {
-    font-size: 1.2rem;
-    color: #BD7F22;
-    margin: 0.5em 0;
+.oraculo-info:hover {
+    transform: translateY(-5px);
+    background-color: #f8f8f8;
 }
 
 .agendar-asesoria {
@@ -127,12 +139,13 @@ body {
     color: white;
     cursor: pointer;
     border-radius: 10%;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .agendar-asesoria:hover {
     background: white;
     color: black;
+    transform: scale(1.05);
 }
 
 /* ==========================
@@ -143,37 +156,16 @@ body {
     background-color: black;
     text-align: center;
     padding: 3em 1em;
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.curso {
-    flex: 0 0 auto;
-    padding: 1em;
+    transition: padding 0.3s ease;
 }
 
 .curso img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #BD7F22;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.cursos-info h1 {
-    font-size: 1.2rem;
-    color: #c18328;
-    margin-top: 1em;
+.curso img:hover {
+    transform: scale(1.05);
+    border-color: #fff;
 }
 
 /* ==========================
@@ -183,30 +175,20 @@ body {
     width: 100%;
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
-    background-size: contain; /* Escalar completa */
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 3em 1em;
     text-align: center;
+    transition: background-size 0.5s ease;
 }
 
-.imagenes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+.imagenes-container img {
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.libros img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 3px solid #BD7F22;
-}
-
-.infolibros p {
-    font-size: clamp(1rem, 4vw, 40px);
-    color: #C4BAA6;
-    margin: 1em 0;
+.imagenes-container img:hover {
+    transform: scale(1.05);
+    border-color: #fff;
 }
 
 /* ==========================
@@ -220,108 +202,46 @@ body {
     flex-wrap: wrap;
     gap: 2em;
     padding: 3em 1em;
+    transition: gap 0.3s ease;
 }
 
 .fotoautora img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 5%;
-    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.infoautora {
-    flex: 1;
-    color: white;
-}
-
-.infoautora h1 {
-    font-size: clamp(1.5rem, 4vw, 40px);
-    color: #BD7F22;
-}
-
-.infoautora h2 {
-    font-size: 1rem;
-}
-
-.infoautora h3 {
-    font-size: 1rem;
-    color: #BD7F22;
+.fotoautora img:hover {
+    transform: scale(1.05);
 }
 
 /* ==========================
    8. PRESENTACIÓN DEL TRABAJO
    ========================== */
-.presentaciontrabajo {
-    background-color: black;
-    padding: 3em 1em;
-    text-align: center;
-}
-
-.serviciosexp {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5em;
-    margin-top: 2em;
-}
-
 .serviciosexp > div {
-    padding: 1em;
-    border: 1px solid #BD7F22;
-    border-radius: 8px;
-    color: white;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.serviciosexp > div:hover {
+    transform: translateY(-5px);
+    border-color: white;
 }
 
 /* ==========================
    9. CONTACTO
    ========================== */
-.contacto {
-    width: 100%;
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-    padding: 3em 1em;
-}
-
 .fotocontacto img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 5%;
-    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.infocontacto {
-    border: 2px solid #C4BAA6;
-    border-radius: 5%;
-    padding: 1em;
-    text-align: center;
-    color: #C4BAA6;
-}
-
-.infocontacto h1 {
-    font-size: clamp(2rem, 6vw, 60px);
-}
-
-.infocontacto h2 {
-    font-size: clamp(1.2rem, 4vw, 30px);
-}
-
-.infocontacto h3 {
-    font-size: clamp(1rem, 3vw, 20px);
-}
-
-.redes-sociales ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    padding: 0;
-    margin-top: 1em;
+.fotocontacto img:hover {
+    transform: scale(1.05);
 }
 
 .red-social img {
-    width: 30px;
-    filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.red-social img:hover {
+    transform: scale(1.1);
+    filter: invert(100%);
+}
+
