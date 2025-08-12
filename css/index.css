@@ -13,51 +13,56 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  display: flex;              /* agrego flex para que funcione */
-  flex-direction: column;     /* columnas para que h1 y h2 se apilen */
-  justify-content: center;    /* centrar verticalmente */
-  align-items: center;        /* centrar horizontalmente */
-  position: relative;
+  position: relative; /* para posicionar hijos absolute */
   overflow-x: hidden;
-  text-align: center;         /* centrar texto */
-  padding: 2em;               /* para que no quede pegado */
 }
 
+/* posición absoluta para h1 y h2 */
 .inicio h1 {
+  position: absolute;
+  top: 280px;
+  left: 100px;
   font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-  font-size: 6rem;           /* usa rem para escalabilidad */
+  font-size: 100px;
   color: #BD7F22;
-  margin: 0.2em 0;
+  margin: 0; /* elimina márgenes para mejor control */
 }
 
 .inicio h2 {
+  position: absolute;
+  top: 420px;
+  left: 400px;
   font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-  font-size: 3.5rem;
+  font-size: 60px;
   color: #BD7F22;
-  margin: 0.2em 0;
+  margin: 0;
 }
 
 /* Media queries para pantallas pequeñas */
 
 @media (max-width: 768px) {
-  .inicio {
-    height: auto;              /* que se ajuste al contenido */
-    padding: 1em;
-  }
   .inicio h1 {
-    font-size: 4rem;
+    top: 150px;
+    left: 20px;
+    font-size: 70px;
   }
   .inicio h2 {
-    font-size: 2.5rem;
+    top: 230px;
+    left: 20px;
+    font-size: 50px;
   }
 }
 
 @media (max-width: 480px) {
   .inicio h1 {
-    font-size: 2.5rem;
+    top: 100px;
+    left: 10px;
+    font-size: 40px;
   }
   .inicio h2 {
-    font-size: 1.5rem;
+    top: 160px;
+    left: 10px;
+    font-size: 30px;
   }
 }
 
