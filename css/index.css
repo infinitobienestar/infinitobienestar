@@ -155,12 +155,11 @@ margin-left: 100px;
 /* Asesorías - Escritorio */
 .asesorias {
     width: 100%;
-    height: 1000px; /* fija, puede causar problemas en móvil */
+    height: auto;
     background-color: black;
     display: inline-block;
     margin-top: 0;
-    position: relative;
-    z-index: 10;
+    /* Sin position ni z-index aquí */
 }
 
 .titulo {
@@ -270,7 +269,7 @@ margin-left: 100px;
     .asesorias {
         height: auto; /* para que ajuste contenido y no tape */
         position: relative;
-        z-index: 10;
+        z-index: 2;
         margin-bottom: 30px; /* espacio para no tapar cursos */
     }
 
@@ -320,8 +319,7 @@ margin-left: 100px;
     display: inline-block;
     float: none;
     box-sizing: border-box;
-    position: relative;
-    z-index: 1;
+    /* Sin position ni z-index aquí */
 }
 
 .carousel-container {
@@ -431,6 +429,7 @@ margin-left: 100px;
         z-index: 1;
         margin-bottom: 30px; /* espacio para no tapar otras secciones */
     }
+    
 
     .carousel-container {
         width: 100%;
