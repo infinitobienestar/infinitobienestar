@@ -1,397 +1,120 @@
-/*cuerpo*/
-.body{
-    width:100%;
+/* ==========================
+   1. ESTILOS BASE
+   ========================== */
+body {
+    width: 100%;
     height: 100%;
-    background-color:black;
+    background-color: black;
     overflow-x: hidden;
+    margin-top: 0;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
 }
 
-/*inicio*/
-
+/* ==========================
+   2. SECCIÓN INICIO
+   ========================== */
 .inicio {
-width: 100%;
-height: 84em;
-background-color: black;
-background-image: url("../imagenes/infinito1.jpeg");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-justify-content: center;
-align-items:center;
-position: relative;
-overflow-x: hidden;
+    width: 100%;
+    height: 800px;
+    background-color: black;
+    background-image: url("../imagenes/infinito1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.inicio h1{
-font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-font-size: 100px;
-display: inline-block;
-align-items: center;
-text-align: center;
-color: #BD7F22;
-margin-top: 280px;
-margin-left: 100px;
-}
-
-.inicio h2{
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-    font-size: 60px;
-    display: inline-block;
-    text-align: left;
+.inicio h1, .inicio h2 {
     color: #BD7F22;
-    margin-top: 420px;
-    margin-left: 400px;
-   
-    }
-/* Media queries para pantallas pequeñas */
-
-/* Ajustes para pantallas de tamaño medio */
-@media (max-width: 768px) {
-    .inicio {
-        /* Centrar el contenido vertical y horizontalmente en pantallas pequeñas */
-        justify-content: center;
-        align-items: center;
-        text-align: center; /* Centrar texto en pantallas pequeñas */
-    }
-
-    .inicio h1 {
-        position: relative;
-        font-size: 70px; /* Reducir tamaño de fuente en pantallas pequeñas */
-        margin: 450px auto auto; /* Centrarse horizontalmente y ajustar margen superior */
-    }
-
-    .inicio h2 {
-        position: relative;
-        font-size: 70px; /* Reducir tamaño de fuente en pantallas pequeñas */
-        margin: 10px auto auto; /* Centrarse horizontalmente y ajustar margen superior */
-        text-align: center;
-    }
 }
 
-@media (max-width: 480px) {
-    .inicio {
-        /* Ajustar altura al contenido */
-        height: auto;
-        padding: 20px; /* Relleno para evitar que el contenido quede pegado a los bordes */
-    }
-
-    .inicio h1 {
-        font-size: 10px; /* Reducir tamaño de fuente en pantallas muy pequeñas */
-        margin: 20px auto; /* Ajustar margen superior y centrar horizontalmente */
-    }
-
-    .inicio h2 {
-        font-size: 10px; /* Reducir tamaño de fuente en pantallas muy pequeñas */
-        margin: 10px auto; /* Ajustar margen superior y centrar horizontalmente */
-    }
-}
-
-
-
-/* bienvenido*/
-
+/* ==========================
+   3. SECCIÓN BIENVENIDO
+   ========================== */
 .bienvenido {
     width: 100%;
-    height: 50em;
+    height: 800px;
     background-color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    }
-
-.bienvenido .lado1 {
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 
-.bienvenido .lado1 img{
- 
-    width: 70%;
-    border-radius: 15px;
-  }
+.bienvenido .lado1 img {
+    width: 100%;
+    max-width: 500px;
+}
 
 .bienvenido .lado2 {
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-    font-size: 3vw;
-    display: flex;
+    font-size: 30px;
     text-align: center;
     color: #BD7F22;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-right: 2em;
 }
 
-/* Media queries para adaptabilidad */
-@media (max-width: 1200px) {
-    .bienvenido .lado2 {
-        font-size: 1.5em; /* Reducir tamaño de fuente para pantallas más pequeñas */
-        margin-right: 50px; /* Reducir margen */
-    }
+/* ==========================
+   4. SECCIÓN ASESORÍAS
+   ========================== */
+.asesorias {
+    width: 100%;
+    height: 800px;
+    background-color: black;
 }
 
-@media (max-width: 768px) {
-    .bienvenido {
-        grid-template-columns: 1fr; /* Apilar las columnas verticalmente */
-        height: auto; /* Ajustar altura al contenido */
-    }
-
-    .bienvenido .lado2 {
-        font-size: 4vw; /* Reducir tamaño de fuente para pantallas más pequeñas */
-        margin-right: 1em; /* Reducir margen */
-    }
-}
-
-@media (max-width: 480px) {
-    .bienvenido .lado1 img {
-        width: 90%; /* Aumentar el ancho de la imagen en pantallas muy pequeñas */
-    }
-
-    .bienvenido .lado2 {
-        font-size: 3vw; /* Reducir tamaño de fuente aún más para pantallas muy pequeñas */
-        margin-right: 1em; /* Reducir margen */
-    }
-}
-/*Asesorías*/
-.asesorias{
-width: 100%;
-height: 1000px;
-background-color: black;
-display:inline-block;
-margin-top: 0;
-}
-
-.titulo{
+.titulo {
     font-size: 100px;
     text-align: center;
     color: #BD7F22;
     font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    background-color: black;
-    margin-top: o;
+    margin-top: 0;
 }
 
 .asesorias-container {
     display: grid;
-    height: 600px;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: black;
-     }
-
-
-.asesorias-container img{
-    width: 300px;
-    height: 300px;
-    display: block;
-    margin:0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.oraculo-info{
+.asesorias-container img {
+    width: 300px;
+    height: auto;
+}
+
+.oraculo-info {
     background-color: white;
-    height: 180px;
+    padding: 10px;
+    text-align: center;
     width: 300px;
 }
-.oraculo-info h1{
-    font-size: 20px;
-    text-align: center;
-    color: #BD7F22;
-    font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    margin-top: 20px ;
-    align-items: center;
-    align-content: center;
-}
 
-.oraculo-info h2 {
-    font-size: 20px;
-    text-align: center;
-    color: #BD7F22;
-    font-weight: 100;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-}
-
-.asesoria1, .asesoria2, .asesoria3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-color:  #BD7F22;
-    background-color: black;
-   
-
-}
-.asesoria1 .oraculo-info, .asesoria2 .oraculo-info, .asesoria3 .oraculo-info {
-    text-align: center; /* Centers the text within each container */
-}
-
-
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 8vw; /* Tamaño de fuente más grande para pantallas pequeñas */
-    }
-
-    .asesorias-container {
-        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
-    }
-
-    .asesoria1, .asesoria2, .asesoria3 {
-        padding: 10px; /* Espaciado reducido */
-    }
-
-    .oraculo-info h1,
-    .oraculo-info h2 {
-        font-size: 1.2rem; /* Tamaño de fuente reducido */
-    }
-}
-
-/*boton de agendar*/
 .agendar-asesoria {
     margin-top: 10px;
     padding: 10px;
     background-color: #BD7F22;
     color: white;
     cursor: pointer;
-    display: inline-block;
     border-radius: 10%;
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 
 .agendar-asesoria:hover {
-    background: white; /* Color de fondo al pasar sobre él */
-    color: black;      /* Color de texto al pasar sobre él */
+    background: white;
+    color: black;
 }
 
-/* Enlace dentro del botón */
-.agendar-asesoria a {
-    color: inherit;          /* Usa el color del contenedor */
-    text-decoration: none;   /* Quita el subrayado */
-}
-
-.agendar-asesoria a:hover {
-    color: inherit;          /* Mantiene el color del contenedor en hover */
-}
-
-/* Botones con otras clases */
-.agendar,
-.asesoria1,
-.asesoria2,
-.asesoria3 {
-    background: none;        /* Color de fondo */
-    color: #BD7F22;           /* Color de texto */
-    padding: 35px;            /* Espaciado interno */
-    margin-top: 20px;         /* Espacio superior */
-    border-radius: 10px;      /* Radio de borde */
-    border: 1px solid #BD7F22;
-    cursor: pointer;          /* Cambia el cursor al pasar sobre él */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-}
-
-    
-    
-    
-
-/*Cursos*/
-
-
+/* ==========================
+   5. SECCIÓN CURSOS
+   ========================== */
 .cursos {
     width: 100%;
-    height: 1000px;
-    text-align: center;
-    margin: 0px;
-    padding-top: 0%;
-    padding: 0%;
+    height: 800px;
     background-color: black;
-    display:inline-block;
-    float: none;
-    box-sizing: border-box;
+    text-align: center;
 }
 
-.carousel-container {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+.curso img:hover {
+    border-color: white;
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.curso {
-    min-width:auto;
-    display:inline-block;
-    padding: 80px;
-    box-sizing: border-box;
-}
-
-.curso img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: #BD7F22;
-    border-width: 5px;
-    margin-top: 0%;
-}
-
-.cursos-info {
-    height: 180px;
-    width: 200px;
-    align-items: center;
-    justify-content: center;
-    display: inline-block;
-    box-sizing:border-box;
-}
-
-.cursos-info h1 {
-    font-size: 20px;
-    margin-top: 0%;
-    color:#c18328;
-    justify-content: center;
-    padding: 40px;  
-}
-
-.agendar {
-    margin-top: 10px;
-    padding: 10px;
-    background-color:#BD7F22;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 10%;
-}
-.agendar:hover {
-    background:white; /* Color de fondo al pasar sobre él */
-    color:black /* Color de texto al pasar sobre él */
-}
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/*libros*/
-
+/* ==========================
+   6. SECCIÓN LIBROS
+   ========================== */
 .libros {
     width: 100%;
     height: 800px;
@@ -399,379 +122,104 @@ margin-top: 0;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
 }
 
-/* Nuevo contenedor para imágenes con flex */
-.imagenes-container {
-    display: flex;
-    justify-content: flex-end; /* mueve imágenes a la derecha */
-    width: 100%;
+.imagenes-container img:hover {
+    border-color: white;
 }
 
-.libros1 img,
-.libros2 img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: solid 3px #BD7F22;
-    margin: 10px;
-    /* no position static necesario */
-}
-
-.infolibros p {
-    font-size: 40px;
-    color: #C4BAA6;
-    background: none;
-    text-align: center;
-    margin: 20px 10px ;
-}
-
-.comprar {
-    padding: 10px 0px;
-    background-color: #BD7F22;
-    color: white;
-    cursor: pointer;
-    border-radius: 10%;
-    font-size: 20px;
-    margin-top: 30px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.comprar:hover {
-    background: black;
-    color: #BD7F22;
-}
-
-/* MEDIA QUERY PARA MÓVILES */
-@media (max-width: 600px) {
-    .libros {
-        height: auto; /* Que se adapte a contenido */
-        padding: 10px;
-    }
-    .imagenes-container {
-        justify-content: center; /* centrar imágenes en móvil */
-    }
-    .libros1 img,
-    .libros2 img {
-        width: 150px;
-        height: 150px;
-        margin: 5px auto; /* centrado horizontal */
-        display: block;
-    }
-    .infolibros p {
-        font-size: 24px;
-        margin: 10px 0;
-    }
-    .comprar {
-        font-size: 16px;
-        padding: 8px 16px;
-        margin-top: 20px;
-    }
-}
-
-/*presentacion*/
-
+/* ==========================
+   7. SECCIÓN PRESENTACIÓN
+   ========================== */
 .presentacion {
     width: 100%;
     height: 800px;
     background-color: black;
-    margin: 0;
-    padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
 }
 
-/* Estilos para la imagen */
 .fotoautora img {
-    width: 500px;
-    height: 500px;
-    border-radius: 5%;
-    margin-left: 80px;
-    object-fit: cover;
+    max-width: 500px;
 }
 
-/* Estilos para el texto */
-.infoautora {
-    width: 600px;
-    height: auto;
-    border-radius: 5%;
-    margin-left: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* ==========================
+   8. PRESENTACIÓN DEL TRABAJO
+   ========================== */
+.serviciosexp > div:hover {
+    border-color: white;
 }
 
-.infoautora h1 {
-    font-size: 40px;
-    text-align: center;
-    color: #BD7F22;
-    font-weight: 100;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-    margin: 0 0 1em 0;
-}
-
-.infoautora h2, .infoautora h3 {
-    font-size: 20px;
-    text-align: justify;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-    margin: 0 0 1em 0;
-}
-
-.infoautora h2 {
-    color: white;
-}
-
-.infoautora h3 {
-    color: #BD7F22;
-}
-
-/* Media Query para pantallas menores a 768px */
-@media (max-width: 768px) {
-    .presentacion {
-        flex-direction: column;
-        height: auto;
-        padding: 2em 1em;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5em;
-    }
-
-    .fotoautora img {
-        width: 80vw; /* Ancho relativo al viewport */
-        height: auto; /* Mantener proporción */
-        margin-left: 0;
-        border-radius: 10px;
-    }
-
-    .infoautora {
-        width: 90vw;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .infoautora h2, .infoautora h3 {
-        text-align: center;
-        margin-left: 0;
-    }
-}
-
- /*presentacion del trabajo*/
-
- .presentaciontrabajo {
-    height: 800px;
-    text-align: center;
-    padding: 20px;
-    background-color: black;
-}
-
-.presentaciontrabajo h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif; 
-    font-weight: 100; /* corregido */
-    margin-top: 80px;
-}
-
-.serviciosexp {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.serviciosexp > div {
-    padding: 20px;
-    border: 1px solid #BD7F22; /* simplificado */
-    border-radius: 8px;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif; 
-    color: white;
-    font-weight: 100; /* corregido */
-}
-
-.parejas {
-    grid-column: 1;
-}
-
-.personal {
-    grid-column: 2;
-}
-
-.educacion {
-    grid-column: 3;
-}
-
-/* Adaptación para móviles */
-@media (max-width: 600px) {
-    .presentaciontrabajo {
-        height: auto;
-        padding: 15px;
-    }
-
-    .presentaciontrabajo h1 {
-        font-size: 1.8rem;
-        margin-top: 40px;
-    }
-
-    .serviciosexp {
-        display: block;
-        margin-top: 15px;
-    }
-
-    .serviciosexp > div {
-        border: 1px solid #BD7F22;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        font-size: 1rem;
-    }
-
-    .parejas,
-    .personal,
-    .educacion {
-        grid-column: auto;
-    }
-}
-
-
-/* Contacto */
-.contacto {
-    width: 100%;
-    height: 800px;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centra los hijos horizontalmente */
-    align-items: center; /* Centra los hijos verticalmente */
-}
-
+/* ==========================
+   9. CONTACTO
+   ========================== */
 .fotocontacto img {
-    width: 500px;
-    height: 500px;
-    border-radius: 5%;
-    margin-top: 8em;
-    margin-left: 80px;
+    max-width: 500px;
 }
 
-.infocontacto { 
-    width: 600px;
-    height: 600px;
-    border: 2px solid #C4BAA6; /* Añade un borde de 2 píxeles de ancho con el color especificado */
-    border-radius: 5%;
-    margin-top: 2em;
-    margin-left: 20px;
-    display: flex; /* Asegura que este elemento sea un contenedor flex */
-    flex-direction: column; /* Alinea los elementos en columna */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    overflow: hidden; /* Evita que el contenido se desborde */
-    padding: 10px; /* Añade un pequeño relleno interior */
-    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del elemento */
-}
+/* ==========================
+   10. AJUSTES RESPONSIVOS
+   ========================== */
 
-.infocontacto h1,
-.infocontacto h2,
-.infocontacto h3 {
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #C4BAA6;
-    font-weight: 100;
-    margin: 10px 0; /* Ajusta los márgenes para una mejor separación */
-}
-
-.infocontacto h1 {
-    font-size: 60px;
-}
-
-.infocontacto h2 {
-    font-size: 30px;
-}
-
-.infocontacto h3 {
-    font-size: 20px;
-}
-
-.redes-sociales ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Centra las redes sociales */
-}
-
-.redes-sociales li {
-    display: inline;
-    margin: 0 10px; /* Ajusta el espaciado entre los ítems */
-}
-
-.red-social img {
-    width: 30px; /* Establece el ancho de las imágenes */
-    height: auto; /* Mantén la relación de aspecto */
-    padding: 10px; /* Añade un relleno alrededor de cada imagen */
-    filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%); /* Ajusta el color */
-}
-
-.redes-sociales li:first-child .red-social img {
-    margin-left: 0; /* Elimina el margen izquierdo de la primera imagen */
-}
-
-/* Media query para pantallas pequeñas */
+/* Tablet y pantallas medianas */
 @media (max-width: 768px) {
-    .contacto {
-        flex-direction: column; /* Apilar elementos verticalmente */
-        height: auto; /* Que la altura se ajuste al contenido */
-        padding: 20px 10px; /* Algo de espacio alrededor */
+    .imagenes-container img {
+        width: 180px;
+        height: 180px;
     }
 
+    .fotoautora img,
     .fotocontacto img {
-        width: 80vw; /* Ancho relativo a la pantalla, para que no desborde */
-        height: auto; /* Mantener proporción */
-        margin-top: 2em;
-        margin-left: 0;
-        border-radius: 10px;
+        max-width: 350px;
     }
 
-    .infocontacto {
-        width: 90vw; /* Ancho casi completo en móviles */
-        height: auto; /* Ajustar altura al contenido */
-        margin-top: 1.5em;
-        margin-left: 0;
-        padding: 15px;
+    .bienvenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+        height: auto;
     }
 
-    .infocontacto h1 {
-        font-size: 40px;
+    .asesorias {
+        height: auto;
     }
 
-    .infocontacto h2 {
-        font-size: 24px;
+    .presentacion {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .imagenes-container img {
+        width: 140px;
+        height: 140px;
     }
 
-    .infocontacto h3 {
-        font-size: 16px;
+    .fotoautora img,
+    .fotocontacto img {
+        max-width: 280px;
     }
 
-    .redes-sociales ul {
-        justify-content: center;
-        flex-wrap: wrap; /* Permitir que las redes sociales bajen si no caben en una línea */
+    .titulo {
+        font-size: 50px;
     }
 
-    .redes-sociales li {
-        margin: 5px 8px;
+    .asesorias-container {
+        grid-template-columns: 1fr;
     }
 
-    .red-social img {
-        width: 25px;
-        padding: 8px;
+    .bienvenido .lado1 img {
+        max-width: 280px;
+    }
+
+    .inicio {
+        height: auto;
+        background-size: contain;
+    }
+
+    .libros {
+        height: auto;
+        background-size: contain;
     }
 }
