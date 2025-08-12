@@ -410,20 +410,53 @@ margin-left: 100px;
 
 
 @media (max-width: 768px) {
-    .carousel-container,
-    .carousel {
-        width: 100%;
-        overflow: visible;
-        position: static !important;
-        height: auto !important;
-        margin-bottom: 30px;
-        text-align: center; /* para centrar botones */
+
+    /* Ajustes para asesorías (igual que antes) */
+    .asesorias-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+        height: auto;
     }
 
-    .curso {
+    .asesoria1, .asesoria2, .asesoria3 {
+        padding: 10px;
+    }
+
+    .oraculo-info {
         width: 90%;
-        margin: 0 auto 20px auto;
-        display: block;
+        margin: 0 auto;
+        height: auto;
+        padding: 10px;
+    }
+
+    .asesorias-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* -------- CURSOS -------- */
+
+    /* Carousel container: mostrar solo 1 curso, ocultar overflow */
+    .carousel-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative; /* necesario para botones */
+        margin-bottom: 30px;
+    }
+
+    /* Carousel: usar flex para alinear horizontalmente */
+    .carousel {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    /* Cada curso ocupa 100% ancho del contenedor */
+    .curso {
+        min-width: 100%;  /* Forzar que cada curso ocupe todo el ancho */
+        box-sizing: border-box;
+        padding: 0 10px;
     }
 
     .cursos-info {
@@ -448,6 +481,7 @@ margin-left: 100px;
         background-color: #BD7F22;
         color: white;
         cursor: pointer;
+        text-align: center;
     }
 
     .agendar:hover {
@@ -455,23 +489,29 @@ margin-left: 100px;
         color: black;
     }
 
-    /* Botones de navegación */
+    /* Botones prev y next en posición relativa y visibles */
     .prev, .next {
-        position: static !important;
-        display: inline-block;
-        margin: 10px 15px;
-        padding: 10px 20px;
-        background-color: #BD7F22;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(189, 127, 34, 0.8);
         color: white;
-        border-radius: 8px;
         border: none;
+        padding: 10px;
         cursor: pointer;
-        transform: none !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
     }
 }
+
 
 /*libros*/
 
