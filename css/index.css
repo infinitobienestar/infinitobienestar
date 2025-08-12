@@ -539,37 +539,33 @@ margin-left: 100px;
 
 .libros {
     width: 100%;
-    min-height: 800px;
+    padding: 20px 20px 40px 20px;
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+    align-items: flex-start;
     box-sizing: border-box;
     color: #C4BAA6;
 }
 
-.libros-imagenes {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap; /* Para que baje si no cabe en horizontal */
-    margin-bottom: 40px;
-}
-
-.libros-imagenes img {
+.libros1 img,
+.libros2 img {
+    position: static; /* que no estén absolute para subirlos */
+    margin: 10px 30px 20px 30px;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 3px solid #BD7F22;
     object-fit: cover;
     transition: transform 0.3s ease;
+    display: inline-block;
 }
 
-.libros-imagenes img:hover {
+.libros1 img:hover,
+.libros2 img:hover {
     transform: scale(1.05);
 }
 
@@ -581,27 +577,31 @@ margin-left: 100px;
 }
 
 .comprar {
+    color: white !important;
+    text-decoration: none !important;
     padding: 15px 30px;
     background-color: #BD7F22;
-    color: white;
-    cursor: pointer;
     border-radius: 12px;
     font-size: 22px;
+    cursor: pointer;
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
 
 .comprar:hover {
     background-color: black;
-    color: #BD7F22;
+    color: #BD7F22 !important;
 }
 
 /* Media Queries para pantallas más pequeñas */
 
 @media (max-width: 900px) {
-    .libros-imagenes img {
+    .libros1 img,
+    .libros2 img {
         width: 180px;
         height: 180px;
+        margin: 10px 20px 15px 20px;
     }
     .infolibros p {
         font-size: 28px;
@@ -616,13 +616,12 @@ margin-left: 100px;
 }
 
 @media (max-width: 480px) {
-    .libros-imagenes {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .libros-imagenes img {
+    .libros1 img,
+    .libros2 img {
         width: 150px;
         height: 150px;
+        margin: 10px auto 15px auto;
+        display: block;
     }
     .infolibros p {
         font-size: 22px;
