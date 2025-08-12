@@ -543,9 +543,7 @@ margin-left: 100px;
         right: 10px;
     }
 
-/*libros*/
-
-/*libros*/
+/*=====LIBROS=====*/
 
 .libros {
     position: relative; /* posiciona los elementos absolute dentro */
@@ -620,7 +618,7 @@ margin-left: 100px;
     color: #BD7F22;
 }
 
-/* Media Queries */
+/* ===Media Queries===== */
 @media (max-width: 1200px) {
     .libros {
         height: 600px;
