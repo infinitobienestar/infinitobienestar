@@ -1,27 +1,24 @@
 
-/*cuerpo*/
-body {
-    margin: 0 !important;
-    padding: 0 !important;
-    min-height: 100% !important;
-    background-color: black !important;
-    color: white !important;
-    overflow-x: hidden !important;
-    font-family: Arial, sans-serif !important;
-}
-/* Media query para móviles */
-@media (max-width: 600px) {
-    body {
-        padding: 15px;
-        font-size: 16px;
-    }
-    
-    .container {
-        padding: 10px;
-        width: 100%;
-    }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* solo si estás seguro */
 }
 
+body {
+    min-height: 100vh; /* mejor usar vh que % */
+}
+
+/* Estilos base para container */
+.container {
+    max-width: 1200px; /* o el ancho deseado */
+    margin: 0 auto;
+    padding: 20px;
+}
 
 /* Media query para móviles */
 @media (max-width: 600px) {
@@ -33,22 +30,11 @@ body {
     
     .container {
         padding: 10px;
+        width: 100%;
         max-width: 100%;
     }
 }
 
-/* Media query para móviles */
-@media (max-width: 600px) {
-    body {
-        padding: 15px;
-        font-size: 16px;
-    }
-    
-    .container {
-        padding: 10px;
-        width: 100%;
-    }
-}
 
 .inicio {
 width: 100%;
