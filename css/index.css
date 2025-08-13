@@ -540,8 +540,8 @@ margin-left: 100px;
 /*=====LIBROS=====*/
 .libros {
     width: 100%;
-    min-height: 800px;              /* altura mínima, respetando tu diseño */
-    max-height: 1200px;             /* opcional: límite superior para no crecer demasiado */
+    height: 800px;              /* altura mínima, respetando tu diseño */
+          
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;         /* cubre todo el div */
