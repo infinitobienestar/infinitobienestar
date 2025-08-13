@@ -7,9 +7,6 @@ html,body {
     font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
 }
 
-body {
-    min-height: 100vh; /* mejor usar vh que % */
-}
 
 /* Estilos base para container */
 .container {
