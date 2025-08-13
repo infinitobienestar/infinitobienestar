@@ -546,6 +546,7 @@ margin-left: 100px;
     background-size: cover;       /* cubre todo el div sin deformar */
     background-repeat: no-repeat;
     background-position: center center; /* centrada vertical y horizontalmente */
+    background-attachment: scroll;  /* evita que la imagen se “pegue” al viewport */
     color: white;
     text-align: center;           /* centra texto y botón */
     padding: 40px 20px;
