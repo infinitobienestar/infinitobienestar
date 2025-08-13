@@ -542,8 +542,8 @@ margin-left: 100px;
     width: 100%;
     min-height: 800px;              /* altura mínima, respetando tu diseño */
     max-height: 1200px;             /* opcional: límite superior para no crecer demasiado */
-    background-color: black;
-    background-image: url("../imagenes/infinito.jpeg");
+    background-color: red;
+   /* background-image: url("../imagenes/infinito.jpeg");*/
     background-size: cover;         /* cubre todo el div */
     background-repeat: no-repeat;
     background-position: center center;
