@@ -302,7 +302,7 @@ margin-left: 100px;
 
 /* ===== MEDIA QUERY PARA MÓVIL ===== */
 @media (max-width: 768px) {
-    /* Asesorías */
+    
     .asesorias {
         position: relative;
         z-index: 2;
