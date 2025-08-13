@@ -540,67 +540,61 @@ margin-left: 100px;
 /*=====LIBROS=====*/
 .libros {
     width: 100%;
-    min-height: 800px;              /* altura mínima, respetando tu diseño */
-    max-height: 1200px;             /* opcional: límite superior para no crecer demasiado */
-    background-color: red;
-   /* background-image: url("../imagenes/infinito.jpeg");*/
-    background-size: cover;         /* cubre todo el div */
+    height: 800px;
+    background-color: black;
+    background-image: url("../imagenes/infinito.jpeg");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;  /* evita que la imagen se “pegue” al viewport */
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    overflow: hidden;               /* asegura que nada sobresalga */
-    position: relative;             /* ayuda a controlar los elementos hijos */
-}
+    }
 
-.infolibros p {
-    font-size: 40px;
-    color: #C4BAA6;
-    margin-bottom: 40px;
-}
-
-.imagenes-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.imagenes-container img {
+.libros1 img{
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 3px solid #BD7F22;
-    object-fit: cover;
-    transition: transform 0.3s ease;  /* efecto sutil al pasar el cursor */
+    position:absolute;
+    top: 4435px;
+    left: 780px;  
+    border-style: solid; 
+    border-color: #BD7F22;
 }
 
-.imagenes-container img:hover {
-    transform: scale(1.05);
+.libros2 img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position:absolute;
+    top: 4435px;
+    left: 1130px;  
+    border-style: solid; 
+    border-color: #BD7F22; 
+}
+.infolibros p{
+     font-size: 40px;
+     color:#C4BAA6;
+     background: none;
+     justify-content:right;
+     display: flex;
+     margin-top:0;
+     margin-right:400px;
 }
 
-.comprar a {
+.comprar {
+    margin-top: 500px;
+    padding: 10px;
+    background-color:#BD7F22;
+    color: white;
+    cursor: pointer;
     display: inline-block;
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #BD7F22;
-    color: inherit;
     border-radius: 10%;
+    margin-left: 1020px;
     font-size: 20px;
-    text-decoration: none;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+   
+   
 }
-
-.comprar a:hover {
-    background: black;
-    color: #BD7F22;
+.comprar:hover {
+    background:black; /* Color de fondo al pasar sobre él */
+    color:#BD7F22/* Color de texto al pasar sobre él */
 }
-
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .infolibros p {
