@@ -540,21 +540,22 @@ margin-left: 100px;
 /*=====LIBROS=====*/
 .libros {
     width: 100%;
-    height: 800px;              /* altura mínima, respetando tu diseño */
-          
+    min-height: 500px;          /* altura mínima razonable */
+    height: auto;               /* que se ajuste al contenido */
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
-    background-size: cover;         /* cubre todo el div */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: scroll;  /* evita que la imagen se “pegue” al viewport */
+    background-attachment: scroll;
     color: white;
     text-align: center;
     padding: 40px 20px;
     box-sizing: border-box;
-    overflow: hidden;               /* asegura que nada sobresalga */
-    position: relative;             /* ayuda a controlar los elementos hijos */
+    overflow: hidden;
+    position: relative;
 }
+
 
 .infolibros p {
     font-size: 40px;
