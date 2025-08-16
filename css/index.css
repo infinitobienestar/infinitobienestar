@@ -542,14 +542,14 @@ margin-left: 100px;
 .libros {
     width: 100%;
     min-height: 400px;           /* altura mínima razonable */
-    height: 100vh;               /* ocupa toda la pantalla */
+    height: auto;                /* ajusta al contenido */
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;      /* mantiene proporción */
     background-repeat: no-repeat;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 40px 20px 100px 20px; /* padding-bottom para separar la siguiente sección */
+    padding: 40px 20px 100px 20px; /* padding-bottom para separación */
     box-sizing: border-box;
     position: relative;
 }
@@ -615,7 +615,7 @@ margin-left: 100px;
     }
 
     .libros {
-        padding: 20px 10px 60px 10px;
+        padding: 20px 10px 60px 10px; /* menos padding en móviles */
     }
 }
 
@@ -638,11 +638,10 @@ margin-left: 100px;
 /* ===================== SECCIÓN PRESENTACIÓN ===================== */
 .presentacion {
     width: 100%;
-    margin-top: 50px;             /* separación de la sección libros */
+    margin-top: 50px;  /* separación segura de la sección libros */
     display: flex;
-    flex-wrap: wrap;               /* permite que elementos bajen en móviles */
     align-items: center;
-    justify-content: center;       /* centra contenido horizontalmente */
+    justify-content: flex-start;
     gap: 2em;
     padding: 2em;
     background-color: black;
@@ -651,7 +650,8 @@ margin-left: 100px;
 
 .fotoautora img {
     width: 300px;
-    height: auto;                  /* mantiene proporción */
+    max-width: 100%;
+    height: auto;
     border-radius: 5%;
 }
 
@@ -685,35 +685,18 @@ margin-left: 100px;
 /* ===================== RESPONSIVIDAD PRESENTACIÓN ===================== */
 @media (max-width: 768px) {
     .presentacion {
-        flex-direction: column;     /* imagen arriba, texto debajo */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .fotoautora img {
-        width: 250px;               /* mantiene tamaño grande */
-        height: auto;
+        width: 200px;
+        height: 200px;
     }
 
     .infoautora {
-        max-width: 90%;             /* ocupa casi todo el ancho */
-    }
-}
-
-@media (max-width: 480px) {
-    .fotoautora img {
-        width: 200px;               /* tamaño más pequeño para móviles muy pequeños */
-    }
-
-    .infoautora {
-        max-width: 95%;
-    }
-
-    .infoautora h1 {
-        font-size: 28px;
-    }
-
-    .infoautora h2, .infoautora h3 {
-        font-size: 16px;
+        max-width: 100%;
     }
 }
 
