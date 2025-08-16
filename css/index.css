@@ -552,6 +552,7 @@ margin-left: 100px;
     padding: 40px 20px;
     box-sizing: border-box;
     position: relative;
+    margin-bottom: 200px; /* 👈 separación hacia abajo */
 }
 
 .infolibros p {
