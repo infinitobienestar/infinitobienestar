@@ -538,10 +538,11 @@ margin-left: 100px;
     }
 }
 /*=====LIBROS=====*/
+/*===== LIBROS =====*/
 .libros {
     width: 100%;
-    min-height: 300px;
-    height: auto;         /* 👈 deja que crezca según contenido */
+    min-height: 300px;          /* altura mínima razonable */
+    height: auto;               /* deja que crezca con el contenido */
     background-color: black;
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;
@@ -552,7 +553,7 @@ margin-left: 100px;
     text-align: center;
     padding: 40px 20px;
     box-sizing: border-box;
-    overflow: visible;    /* 👈 permite que se muestre todo */
+    overflow: visible;          /* asegura que no se corte el contenido */
     position: relative;
 }
 
@@ -576,21 +577,25 @@ margin-left: 100px;
     border-radius: 50%;
     border: 3px solid #BD7F22;
     object-fit: cover;
-    transition: transform 0.3s ease;  /* efecto sutil al pasar el cursor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);  /* efecto de relieve */
 }
 
 .imagenes-container img:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
 .comprar a {
     display: inline-block;
     margin-top: 40px;
-    padding: 10px 20px;
+    padding: 12px 28px;
     background-color: #BD7F22;
     color: inherit;
-    border-radius: 10%;
+    border-radius: 50px;     /* botón más moderno */
     font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
     text-decoration: none;
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -614,6 +619,23 @@ margin-left: 100px;
 
     .libros {
         padding: 20px 10px;
+    }
+}
+
+/* Ajustes extra para móviles muy pequeños */
+@media (max-width: 480px) {
+    .infolibros p {
+        font-size: 24px;
+    }
+
+    .imagenes-container img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .comprar a {
+        font-size: 18px;
+        padding: 10px 20px;
     }
 }
 
