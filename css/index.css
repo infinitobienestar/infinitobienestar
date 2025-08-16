@@ -541,8 +541,8 @@ margin-left: 100px;
 /* ===================== SECCIÓN LIBROS ===================== */
 .libros {
     width: 100%;
-    min-height: 400px;           /* altura mínima razonable */
-    height: auto;                /* ajusta al contenido */
+    min-height: 300px;           /* altura mínima razonable */
+    height: 800px;                /* ajusta al contenido */
     background-image: url("../imagenes/infinito.jpeg");
     background-size: cover;      /* mantiene proporción */
     background-repeat: no-repeat;
