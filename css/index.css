@@ -777,9 +777,10 @@ margin-left: 100px;
     }
 }
 /* Contacto */
+/* ===== Sección Contacto ===== */
 .contacto {
     width: 100%;
-    min-height: 800px;       /* altura mínima */
+    min-height: 800px;
     background-color: black;
     margin: 0;
     padding: 0;
@@ -812,3 +813,62 @@ margin-left: 100px;
     padding: 10px;
     box-sizing: border-box;
 }
+
+/* Títulos */
+.infocontacto h1,
+.infocontacto h2,
+.infocontacto h3 {
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #C4BAA6;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.infocontacto h1 { font-size: 60px; }
+.infocontacto h2 { font-size: 30px; }
+.infocontacto h3 { font-size: 20px; }
+
+/* Redes sociales */
+.redes-sociales ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociales li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.red-social img {
+    width: 30px;
+    height: auto;
+    padding: 10px;
+    filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%);
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Pantallas medianas */
+@media screen and (max-width: 1200px) {
+    .fotocontacto img {
+        width: 400px;
+        height: 400px;
+    }
+    .infocontacto {
+        width: 500px;
+        height: 500px;
+    }
+    .infocontacto h1 { font-size: 50px; }
+    .infocontacto h2 { font-size: 25px; }
+    .infocontacto h3 { font-size: 18px; }
+}
+
+/* Pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .contacto {
+        fl
+
