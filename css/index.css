@@ -207,7 +207,7 @@ margin-left: 100px;
 
 .asesorias-container {
     display: grid;
-    height:auto;
+    height:600px;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: black;
 }
@@ -323,6 +323,7 @@ margin-left: 100px;
         width: 100%;
         box-sizing: border-box;
         justify-items: center; /* centra las tarjetas */
+        height: auto !important;
     }
 
     .asesoria1,
