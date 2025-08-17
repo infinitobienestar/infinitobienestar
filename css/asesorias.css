@@ -59,16 +59,6 @@
     padding: 2rem;
 }
 
-/* En móviles, que se pongan en columna */
-@media (max-width: 768px) {
-    .oraculo2,
-    .entrenamientoa2,
-    .reflexion {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 /* Imágenes */
 .oraculo2-lado1 img,
 .entrenamientoa2-lado1 img,
@@ -115,4 +105,33 @@
     font-size: 30px;
     font-weight: 100;
     margin: 0.5em 0;
+}
+
+@media (max-width: 768px) {
+    .section-oraculo2,
+    .section-entrenamientoa2,
+    .section-reflexion {
+        flex-direction: column; /* Poner en columna */
+        text-align: center;     /* Centrar contenido */
+        gap: 10px;              /* Menos espacio en móviles */
+    }
+
+    /* Reducir tamaños de títulos para móviles */
+    .section-oraculo2-lado2 h1,
+    .section-entrenamientoa2-lado2 h1,
+    .section-reflexion2-lado2 h1 {
+        font-size: 36px;
+    }
+
+    .section-oraculo2-lado2 h2,
+    .section-entrenamientoa2-lado2 h2,
+    .section-reflexion2-lado2 h2 {
+        font-size: 24px;
+    }
+
+    .section-oraculo2-lado2 h3,
+    .section-entrenamientoa2-lado2 h3,
+    .section-reflexion2-lado2 h3 {
+        font-size: 20px;
+    }
 }
