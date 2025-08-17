@@ -777,23 +777,23 @@ margin-left: 100px;
     }
 }
 
-/* ===== Sección Contacto Fluida ===== */
 .contacto {
     width: 100%;
-    min-height: 80vh; /* altura relativa a la pantalla */
+    min-height: 80vh;
     background-color: black;
     margin: 0;
     padding: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(20px, 5vw, 60px); /* separación fluida entre imagen e info */
-    flex-wrap: wrap;
+    gap: clamp(20px, 5vw, 60px);
+    flex-direction: row;  /* Lado a lado en escritorio */
+    flex-wrap: nowrap;    /* No se apilan en escritorio */
 }
 
 /* Imagen a la izquierda */
 .fotocontacto img {
-    width: clamp(200px, 40%, 500px); /* ancho fluido */
+    width: clamp(200px, 40%, 500px);
     height: auto;
     border-radius: 5%;
     object-fit: cover;
@@ -801,8 +801,8 @@ margin-left: 100px;
 
 /* Información a la derecha */
 .infocontacto { 
-    width: clamp(250px, 45%, 600px); /* ancho fluido */
-    height: auto; /* ajusta automáticamente */
+    width: clamp(250px, 45%, 600px);
+    height: auto;
     border: 2px solid #C4BAA6;
     border-radius: 5%;
     display: flex;
@@ -812,6 +812,29 @@ margin-left: 100px;
     overflow: hidden;
     padding: 1em;
     box-sizing: border-box;
+}
+
+/* Redes sociales */
+.redes-sociales ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.redes-sociales li {
+    display: inline-block;
+}
+
+.red-social img {
+    width: 30px;
+    height: auto;
+    padding: 10px;
+    filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%);
+    display: block;
 }
 
 /* Títulos con tamaño fluido */
@@ -842,11 +865,15 @@ margin-left: 100px;
     font-size: clamp(14px, 3vw, 20px);
 }
 
-/* ===== Redes sociales - ORIGINAL CORREGIDO ===== */
-.redes-sociales ul {
-    list-style: none;       /* elimina viñetas */
-    padding: 0;
-    margin: 1em 0 0 0;
-    display: flex;           /* pone los ítems en línea */
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;
+/* ===== Media query para móviles ===== */
+@media screen and (max-width: 768px) {
+    .contacto {
+        flex-direction: column; /* Apila imagen e info en móviles */
+        flex-wrap: wrap;
+        padding: 2em 1em;
+    }
+    .fotocontacto img,
+    .infocontacto {
+        width: 90%; /* ocupan casi todo el ancho en móvil */
+    }
+}
