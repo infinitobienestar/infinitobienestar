@@ -308,34 +308,45 @@ margin-left: 100px;
         height: auto;
         overflow: hidden;
         padding: 10px;
+        background-color: #f9f9f9; /* fondo ligero para todo el contenedor */
     }
 
     .asesorias-container {
         display: grid;
-        grid-template-columns: 1fr; /* una columna */
-        gap: 15px; /* espacio entre asesorías */
+        grid-template-columns: 1fr;
+        gap: 20px; /* separación más marcada entre tarjetas */
         width: 100%;
         box-sizing: border-box;
-        justify-items: center; /* centra las asesorías dentro del contenedor */
+        justify-items: center; /* centra las tarjetas */
     }
 
     .asesoria1,
     .asesoria2,
     .asesoria3 {
-        padding: 10px;
-        width: 90%; /* ahora ocupan 90% del ancho */
+        padding: 15px;
+        width: 90%; /* ancho de la tarjeta */
         box-sizing: border-box;
-        border: 1px solid #ddd;
-        border-radius: 8px;
+        border-radius: 12px; /* bordes redondeados */
+        background-color: #fff; /* fondo de la tarjeta */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+        transition: transform 0.3s, box-shadow 0.3s; /* animación al pasar el mouse */
     }
 
-    /* Ajuste de títulos dentro de cada asesoría */
+    /* efecto hover opcional */
+    .asesoria1:hover,
+    .asesoria2:hover,
+    .asesoria3:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
     .asesoria1 h2,
     .asesoria2 h2,
     .asesoria3 h2 {
-        font-size: 1rem; /* un poco más pequeño que el original */
+        font-size: 1rem;
         margin-top: 8px;
         word-wrap: break-word;
+        color: #333;
     }
 
     .oraculo-info {
@@ -344,6 +355,7 @@ margin-left: 100px;
         height: auto;
         padding: 10px;
         box-sizing: border-box;
+        text-align: center;
     }
 
     .oraculo-info h1,
@@ -351,6 +363,7 @@ margin-left: 100px;
         font-size: 1.2rem;
         margin-top: 10px;
         word-wrap: break-word;
+        color: #222;
     }
 
     .asesorias-container img {
@@ -358,6 +371,7 @@ margin-left: 100px;
         max-width: 100%;
         height: auto;
         display: block;
+        border-radius: 8px; /* opcional: redondear imágenes */
     }
 }
 
