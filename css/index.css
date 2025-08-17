@@ -701,42 +701,50 @@ margin-left: 100px;
     }
 }
 
- /*presentacion del trabajo*/
-
- .presentaciontrabajo {
-    height: 800px;
+ /* Presentación del trabajo */
+.presentaciontrabajo {
+    min-height: 800px;
     text-align: center;
     padding: 20px;
     background-color: black;
+    color: white;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
 }
 
+/* Título */
 .presentaciontrabajo h1 {
     text-align: center;
+    margin-top: 10vh; /* espacio dinámico según pantalla */
     margin-bottom: 20px;
-    color: white;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    font-weight: 10;
-    margin-top:80px;
+    font-weight: 400;
+    font-size: 3em; /* tamaño más grande y flexible */
 }
 
+/* Grid de servicios */
 .serviciosexp {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
+/* Tarjetas individuales */
 .serviciosexp > div {
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #BD7F22;
     border-radius: 8px;
-    border-color: #BD7F22;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif; 
-    color: white;
-    font-weight: 10;
-    
+    font-weight: 400;
+    transition: transform 0.3s, box-shadow 0.3s; /* transición suave */
+    cursor: pointer; /* efecto hover más intuitivo */
 }
 
+/* Efecto hover elegante */
+.serviciosexp > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(189, 127, 34, 0.5); /* sombra dorada */
+}
+
+/* Clases específicas para cada tarjeta */
 .parejas {
     grid-column: 1;
 }
@@ -747,6 +755,16 @@ margin-left: 100px;
 
 .educacion {
     grid-column: 3;
+}
+
+/* Ajustes responsivos adicionales */
+@media (max-width: 768px) {
+    .presentaciontrabajo h1 {
+        font-size: 2.5em;
+    }
+    .serviciosexp {
+        gap: 15px;
+    }
 }
 
 /* Contacto */
