@@ -787,25 +787,23 @@ margin-left: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* espacio fijo entre imagen e info */
+    gap: 40px; /* espacio entre imagen e info */
     flex-direction: row;  
     flex-wrap: nowrap;    
 }
 
 /* Imagen a la izquierda */
 .fotocontacto img {
-    width: 500px; /* tamaño fijo en escritorio */
-    max-width: 40%; /* no se pase del 40% en pantallas grandes */
-    height: auto;
+    width: 500px; /* tamaño original */
+    height: 500px; /* tamaño original */
     border-radius: 5%;
     object-fit: cover;
 }
 
 /* Información a la derecha */
 .infocontacto { 
-    width: 600px; /* tamaño fijo en escritorio */
-    max-width: 50%;
-    height: auto;
+    width: 600px; /* tamaño fijo */
+    height: 500px; /* igual que la imagen */
     border: 2px solid #C4BAA6;
     border-radius: 5%;
     display: flex;
@@ -813,8 +811,9 @@ margin-left: 100px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 2em; /* más espacio interno */
+    padding: 2em;
     box-sizing: border-box;
+    margin-right: 20px; /* margen opcional */
 }
 
 /* Redes sociales */
@@ -878,6 +877,8 @@ margin-left: 100px;
     .fotocontacto img,
     .infocontacto {
         width: 90%; 
+        height: auto; /* se ajusta a contenido en móvil */
     }
 }
+
 
