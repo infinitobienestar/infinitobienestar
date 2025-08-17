@@ -779,81 +779,36 @@ margin-left: 100px;
 /* Contacto */
 .contacto {
     width: 100%;
-    height: 800px;
+    min-height: 800px;       /* altura mínima */
     background-color: black;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centra los hijos horizontalmente */
-    align-items: center; /* Centra los hijos verticalmente */
+    justify-content: center; /* centra el conjunto horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    gap: 40px;               /* separación entre imagen e info */
+    flex-wrap: wrap;         /* permite que se apilen en móviles */
 }
 
+/* Imagen a la izquierda */
 .fotocontacto img {
     width: 500px;
     height: 500px;
     border-radius: 5%;
-    margin-top: 8em;
-    margin-left: 80px;
+    object-fit: cover;
 }
 
+/* Información a la derecha */
 .infocontacto { 
     width: 600px;
     height: 600px;
-    border: 2px solid #C4BAA6; /* Añade un borde de 2 píxeles de ancho con el color especificado */
+    border: 2px solid #C4BAA6;
     border-radius: 5%;
-    margin-top: 2em;
-    margin-left: 20px;
-    display: flex; /* Asegura que este elemento sea un contenedor flex */
-    flex-direction: column; /* Alinea los elementos en columna */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    overflow: hidden; /* Evita que el contenido se desborde */
-    padding: 10px; /* Añade un pequeño relleno interior */
-    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del elemento */
-}
-
-.infocontacto h1,
-.infocontacto h2,
-.infocontacto h3 {
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #C4BAA6;
-    font-weight: 100;
-    margin: 10px 0; /* Ajusta los márgenes para una mejor separación */
-}
-
-.infocontacto h1 {
-    font-size: 60px;
-}
-
-.infocontacto h2 {
-    font-size: 30px;
-}
-
-.infocontacto h3 {
-    font-size: 20px;
-}
-
-.redes-sociales ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center; /* Centra las redes sociales */
-}
-
-.redes-sociales li {
-    display: inline;
-    margin: 0 10px; /* Ajusta el espaciado entre los ítems */
-}
-
-.red-social img {
-    width: 30px; /* Establece el ancho de las imágenes */
-    height: auto; /* Mantén la relación de aspecto */
-    padding: 10px; /* Añade un relleno alrededor de cada imagen */
-    filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%); /* Ajusta el color */
-}
-
-.redes-sociales li:first-child .red-social img {
-    margin-left: 0; /* Elimina el margen izquierdo de la primera imagen */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
 }
