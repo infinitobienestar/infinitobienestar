@@ -776,33 +776,34 @@ margin-left: 100px;
         gap: 15px;
     }
 }
-/* Contacto */
+
 /* ===== Sección Contacto ===== */
+/* ===== Sección Contacto Fluida ===== */
 .contacto {
     width: 100%;
-    min-height: 800px;
+    min-height: 80vh; /* altura relativa a la pantalla */
     background-color: black;
     margin: 0;
-    padding: 0;
+    padding: 2em;
     display: flex;
-    justify-content: center; /* centra el conjunto horizontalmente */
-    align-items: center;     /* centra verticalmente */
-    gap: 40px;               /* separación entre imagen e info */
-    flex-wrap: wrap;         /* permite que se apilen en móviles */
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 5vw, 60px); /* separación fluida entre imagen y info */
+    flex-wrap: wrap;
 }
 
 /* Imagen a la izquierda */
 .fotocontacto img {
-    width: 500px;
-    height: 500px;
+    width: clamp(200px, 40%, 500px); /* ancho fluido */
+    height: auto;
     border-radius: 5%;
     object-fit: cover;
 }
 
 /* Información a la derecha */
 .infocontacto { 
-    width: 600px;
-    height: 600px;
+    width: clamp(250px, 45%, 600px); /* ancho fluido */
+    height: auto; /* ajusta automáticamente */
     border: 2px solid #C4BAA6;
     border-radius: 5%;
     display: flex;
@@ -810,30 +811,43 @@ margin-left: 100px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 10px;
+    padding: 1em;
     box-sizing: border-box;
 }
 
-/* Títulos */
-.infocontacto h1,
-.infocontacto h2,
+/* Títulos con tamaño fluido */
+.infocontacto h1 {
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #C4BAA6;
+    font-weight: 100;
+    margin: 0.5em 0;
+    font-size: clamp(32px, 6vw, 60px);
+}
+
+.infocontacto h2 {
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #C4BAA6;
+    font-weight: 100;
+    margin: 0.5em 0;
+    font-size: clamp(18px, 4vw, 30px);
+}
+
 .infocontacto h3 {
     font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
     text-align: center;
     color: #C4BAA6;
     font-weight: 100;
-    margin: 10px 0;
+    margin: 0.5em 0;
+    font-size: clamp(14px, 3vw, 20px);
 }
 
-.infocontacto h1 { font-size: 60px; }
-.infocontacto h2 { font-size: 30px; }
-.infocontacto h3 { font-size: 20px; }
-
-/* Redes sociales */
+/* Redes sociales - Original */
 .redes-sociales ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 1em 0 0 0;
     display: flex;
     justify-content: center;
 }
@@ -850,25 +864,18 @@ margin-left: 100px;
     filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%);
 }
 
-/* ===== MEDIA QUERIES ===== */
-
-/* Pantallas medianas */
-@media screen and (max-width: 1200px) {
-    .fotocontacto img {
-        width: 400px;
-        height: 400px;
-    }
-    .infocontacto {
-        width: 500px;
-        height: 500px;
-    }
-    .infocontacto h1 { font-size: 50px; }
-    .infocontacto h2 { font-size: 25px; }
-    .infocontacto h3 { font-size: 18px; }
+.redes-sociales li:first-child .red-social img {
+    margin-left: 0;
 }
 
-/* Pantallas pequeñas */
+/* ===== Media query mínima para móviles */
 @media screen and (max-width: 768px) {
     .contacto {
-        fl
-
+        flex-direction: column;
+        padding: 2em 1em;
+    }
+    .fotocontacto img,
+    .infocontacto {
+        width: 90%;
+    }
+}
