@@ -302,42 +302,51 @@ margin-left: 100px;
 
 /* ===== MEDIA QUERY PARA MÓVIL ===== */
 @media (max-width: 768px) {
-    
     .asesorias {
-        position: relative;
-        z-index: 2;
+        position: relative; /* ya no necesitamos z-index alto */
+        z-index: 1; /* menor que el header */
         height: auto;
+        overflow: hidden; /* evita que elementos internos se salgan */
+        padding: 10px; /* espacio interno seguro */
     }
 
     .asesorias-container {
+        display: grid;
         grid-template-columns: 1fr;
-        height: auto;
         gap: 20px;
-        padding: 10px;
+        padding: 0; /* padding lo maneja .asesorias */
+        width: 100%; /* asegura que no desborde */
+        box-sizing: border-box;
     }
 
     .asesoria1,
     .asesoria2,
     .asesoria3 {
         padding: 10px;
+        width: 100%; /* asegura que no exceda el contenedor */
+        box-sizing: border-box;
     }
 
     .oraculo-info {
-        width: 90%;
+        width: 100%; /* ocupa todo el ancho disponible */
         margin: 0 auto;
         height: auto;
         padding: 10px;
+        box-sizing: border-box;
     }
 
     .oraculo-info h1,
     .oraculo-info h2 {
         font-size: 1.2rem;
         margin-top: 10px;
+        word-wrap: break-word; /* evita textos largos que desborden */
     }
 
     .asesorias-container img {
         width: 100%;
+        max-width: 100%; /* evita overflow */
         height: auto;
+        display: block;
     }
 }
 
