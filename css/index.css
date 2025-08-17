@@ -542,11 +542,11 @@ margin-left: 100px;
 .libros {
     width: 100%;
     min-height: 400px;         /* altura mínima */
-    max-height: 600px;            
+    max-height: 800px;            
     background-image: url("../imagenes/infinito.jpeg");
     background-size: contain;  /* ajusta la imagen al contenedor sin recortarla */
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: cover;
     color: white;
     text-align: center;
     padding: 40px 20px;        /* padding normal, sin exagerar */
