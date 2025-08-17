@@ -1,19 +1,17 @@
 /* Estilo del header */
+/* Estilo del header */
 .header {
     width: 100%;
     height: 6em;
-}
-
-.header {
     background-color: none;
-    background-size: cover; /* Esto asegura que la imagen de fondo cubra todo el header */
-    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover;
+    background-position: center;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0; /* Esto asegura que el header ocupe todo el ancho de la pantalla */
+    right: 0;
     border-bottom: 3px solid #BD7F22;
     z-index: 2;
     padding: 0 2em;
@@ -21,8 +19,8 @@
 }
 
 .navega img {
-    width: 2em; /* Cambia el ancho de la imagen según lo necesites */
-    height: auto; /* Esto mantiene la proporción de aspecto original */
+    width: 2em;
+    height: auto;
 }
 
 #compras img {
@@ -40,8 +38,8 @@
     color: #BD7F22;
     font-size: 2em;
     text-align: right;
-    margin-left: 0 0.5em;
     font-weight: bold;
+    margin: 0;
 }
 
 #navegador nav {
@@ -78,36 +76,35 @@
     position: fixed;
     z-index: 2000;
     top: 0;
-    right: 30px; /* Coloca el menú fijo en la esquina superior derecha */
-    width: auto; /* Ajusta el ancho automáticamente según el contenido */
+    right: 30px;
+    width: auto;
     max-width: 1300px;
 }
 
-/* Estilos responsivos */
-
+/* Media queries originales */
 @media (max-width: 768px) {
     .header {
         height: auto;
-        padding: 1em; /* Ajusta el padding para pantallas más pequeñas */
+        padding: 1em;
     }
 
     #navegador p {
-        font-size: 1.5em; /* Reduce el tamaño del texto en dispositivos móviles */
+        font-size: 1.5em;
     }
 
     #navegador nav ul li {
-        font-size: 18px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+        font-size: 18px;
         margin-left: 5px;
     }
 
     .menu-fixed {
-        right: 10px; /* Ajusta la posición del menú fijo en dispositivos móviles */
+        right: 10px;
     }
 }
 
 @media (max-width: 480px) {
     #navegador {
-        justify-content: center; /* Centra contenido en pantallas pequeñas */
+        justify-content: center;
     }
 
     #navegador p {
@@ -141,7 +138,7 @@
 }
 
 /* ---------------------- */
-/* Cambios para menú hamburguesa sin JS */
+/* Menú hamburguesa sin JS */
 /* ---------------------- */
 
 /* Ocultar checkbox */
@@ -149,16 +146,14 @@
     display: none;
 }
 
-/* Estilo del icono hamburguesa */
+/* Icono hamburguesa */
 .menu-icon {
-    display: none; /* Solo se mostrará en móvil */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 25px;
     cursor: pointer;
-    order: 2; /* Coloca el icono después del título */
-    margin-left: 10px;
 }
 
 .menu-icon span {
@@ -168,31 +163,45 @@
     border-radius: 2px;
 }
 
-/* Media query para mostrar hamburguesa y ocultar menú normal */
+/* Media query para móviles */
 @media (max-width: 768px) {
     .menu-icon {
         display: flex;
+        order: 2;
+        margin-left: auto; /* Icono a la derecha */
     }
 
-    /* Ocultar menú por defecto en móvil */
-    .menu-fixed ul {
-        display: none;
-        flex-direction: column;
-        background: white;
+    #navegador nav.menu-fixed {
         position: absolute;
-        top: 60px; /* Ajusta según altura del header */
-        right: 10px;
+        top: 60px; /* Justo debajo del header */
+        right: 0;
         width: 200px;
-        padding: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        background: white;
         border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        display: none; /* Solo visible cuando checkbox está activo */
+        flex-direction: column;
+        z-index: 1000;
     }
 
-    /* Mostrar menú al activar checkbox */
-    #menu-toggle:checked + .menu-icon + .menu-fixed ul {
+    #menu-toggle:checked + .menu-icon + .menu-fixed {
         display: flex;
+    }
+
+    .menu-fixed ul {
+        flex-direction: column;
+        padding: 10px;
     }
 
     .menu-fixed ul li {
         margin: 10px 0;
-        text-align: right; /* Mantiene el e*
+        text-align: right;
+    }
+
+    #navegador p {
+        order: 1;
+        flex: 1;
+        text-align: left;
+        margin: 0;
+    }
+}
