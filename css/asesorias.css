@@ -21,8 +21,9 @@
     align-items: center;
     color: #BD7F22;
     justify-content: center;   
+    align-items: center; 
     text-align: center;
-    font-size: 80px; /* tamaño desktop */
+    font-size: 80px;
     font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
     margin-top:0%;
     padding: 0%;
@@ -32,8 +33,18 @@
     width: 100%;
     background-color: black;
     display: flex;
-    flex-direction: column; 
-    gap: 2rem; 
+    flex-direction: column; /* ahora va en columna */
+    gap: 2rem; /* espacio entre bloques */
+    padding: 2rem 0;
+}
+
+/* Imagen arriba, texto abajo */
+.catalogoasesorias {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* cada bloque uno debajo del otro */
+    gap: 2rem;
     padding: 2rem 0;
 }
 
@@ -46,6 +57,16 @@
     align-items: center;
     gap: 2rem;
     padding: 2rem;
+}
+
+/* En móviles, que se pongan en columna */
+@media (max-width: 768px) {
+    .oraculo2,
+    .entrenamientoa2,
+    .reflexion {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* Imágenes */
@@ -94,58 +115,4 @@
     font-size: 30px;
     font-weight: 100;
     margin: 0.5em 0;
-}
-
-/* ===========================
-   AJUSTES PARA MÓVIL (<768px)
-=========================== */
-@media (max-width: 768px) {
-    /* Bloques: columna, centrado */
-    .oraculo2,
-    .entrenamientoa2,
-    .reflexion {
-        flex-direction: column;
-        align-items: center;  /* centra imagen y texto */
-        text-align: center;
-        padding: 1rem 0;      /* solo padding vertical */
-        gap: 1rem;            /* espacio entre imagen y texto */
-    }
-
-    /* Imagen centrada y tamaño adecuado */
-    .oraculo2-lado1 img,
-    .entrenamientoa2-lado1 img,
-    .reflexion2-lado1 img {
-        width: 80%;       
-        max-width: 400px; 
-        margin: 0;         /* quitar margen extra */
-        display: block;
-        height: auto;
-    }
-
-    /* Texto debajo de la imagen */
-    .oraculo2-lado2,
-    .entrenamientoa2-lado2,
-    .reflexion2-lado2 {
-        flex: unset;      
-        margin-top: 0;    /* quitar margen extra */
-    }
-
-    /* Ajustes de fuentes solo para contenido, no el header */
-    .oraculo2-lado2 h1,
-    .entrenamientoa2-lado2 h1,
-    .reflexion2-lado2 h1 {
-        font-size: 35px;
-    }
-
-    .oraculo2-lado2 h2,
-    .entrenamientoa2-lado2 h2,
-    .reflexion2-lado2 h2 {
-        font-size: 20px;
-    }
-
-    .oraculo2-lado2 h3,
-    .entrenamientoa2-lado2 h3,
-    .reflexion2-lado2 h3 {
-        font-size: 18px;
-    }
 }
