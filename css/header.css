@@ -1,95 +1,91 @@
-   /* Estilo del header */
-   .header{
+/* Estilo del header */
+.header {
     width: 100%;
     height: 6em;
-
 }
 
-  .header {
-    background-color:none;
+.header {
+    background-color: none;
     background-size: cover; /* Esto asegura que la imagen de fondo cubra todo el header */
     background-position: center; /* Centra la imagen de fondo */
     display: flex;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     position: fixed;
     top: 0;
     left: 0;
     right: 0; /* Esto asegura que el header ocupe todo el ancho de la pantalla */
-    border-bottom: 3px solid#BD7F22;
+    border-bottom: 3px solid #BD7F22;
     z-index: 2;
-    padding: 0 2em ;
+    padding: 0 2em;
     box-sizing: border-box;
-  }
+}
 
-  .navega img {
+.navega img {
     width: 2em; /* Cambia el ancho de la imagen según lo necesites */
     height: auto; /* Esto mantiene la proporción de aspecto original */
-    
- #compras img {
-  filter: hue-rotate(220deg) saturate(100%) brightness(100%);; /* Cambia el color de la imagen. Puedes ajustar el valor para cambiar el nivel de inversión */
 }
+
+#compras img {
+    filter: hue-rotate(220deg) saturate(100%) brightness(100%);
 }
-  #navegador {
+
+#navegador {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
-  }
-  
+}
 
-  #navegador p {
-    color:#BD7F22;
+#navegador p {
+    color: #BD7F22;
     font-size: 2em;
     text-align: right;
     margin-left: 0 0.5em;
-    font-weight:bold;
- 
-  }
-  
-  #navegador nav {
+    font-weight: bold;
+}
+
+#navegador nav {
     display: flex;
     align-items: center;
-  }
-  
-  #navegador nav ul {
+}
+
+#navegador nav ul {
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0;
-  }
-  
-  #navegador nav ul li {
+}
+
+#navegador nav ul li {
     font-size: 20px;
     margin-left: 20px;
     margin-top: 10px;
-    font-weight:400;
-  }
-  
-  #navegador .menu-fixed ul li a {
+    font-weight: 400;
+}
+
+#navegador .menu-fixed ul li a {
     display: block;
     padding: 10px;
-    color:#BD7F22;
+    color: #BD7F22;
     text-decoration: none;
-    
-  }
-  
-  #navegador nav ul li:hover {
+}
+
+#navegador nav ul li:hover {
     background: white;
-  }
-  
-  #navegador .menu-fixed {
+}
+
+#navegador .menu-fixed {
     position: fixed;
     z-index: 2000;
     top: 0;
     right: 30px; /* Coloca el menú fijo en la esquina superior derecha */
     width: auto; /* Ajusta el ancho automáticamente según el contenido */
     max-width: 1300px;
-  }
-  
-  /* Estilos responsivos */
+}
 
-  @media (max-width: 768px) {
+/* Estilos responsivos */
+
+@media (max-width: 768px) {
     .header {
         height: auto;
         padding: 1em; /* Ajusta el padding para pantallas más pequeñas */
@@ -110,34 +106,93 @@
 }
 
 @media (max-width: 480px) {
-  #navegador {
-    justify-content: center; /* Asegura que el contenido esté centrado también en pantallas pequeñas */
+    #navegador {
+        justify-content: center; /* Centra contenido en pantallas pequeñas */
+    }
+
+    #navegador p {
+        font-size: 1.5em;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        order: 1;
+    }
+
+    #navegador nav {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #navegador nav ul {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #navegador nav ul li {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .menu-fixed {
+        top: 60px;
+        right: 5px;
+    }
 }
 
-#navegador p {
-    font-size: 1.5em;
-    text-align: center; /* Centra el texto dentro del p */
-    width: 100%; /* Asegura que el p ocupe todo el ancho disponible */
-    margin: 0; /* Elimina el margen para centrarlo mejor */
-    order: 1;
-  }
-  #navegador nav {
-    width: 100%;
-    text-align: center; /* Centra el contenido de la navegación */
-    justify-content: center;
+/* ---------------------- */
+/* Cambios para menú hamburguesa sin JS */
+/* ---------------------- */
+
+/* Ocultar checkbox */
+#menu-toggle {
+    display: none;
 }
 
-#navegador nav ul {
-    justify-content: center; /* Centra la lista de navegación en dispositivos móviles */
-    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+/* Estilo del icono hamburguesa */
+.menu-icon {
+    display: none; /* Solo se mostrará en móvil */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    order: 2; /* Coloca el icono después del título */
+    margin-left: 10px;
 }
 
-#navegador nav ul li {
-    font-size: 16px;
-    margin-left: 5px;
+.menu-icon span {
+    display: block;
+    height: 4px;
+    background-color: #BD7F22;
+    border-radius: 2px;
 }
-.menu-fixed {
-  top: 60px;
-  right: 5px;
-}
-}
+
+/* Media query para mostrar hamburguesa y ocultar menú normal */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Ocultar menú por defecto en móvil */
+    .menu-fixed ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px; /* Ajusta según altura del header */
+        right: 10px;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        border-radius: 8px;
+    }
+
+    /* Mostrar menú al activar checkbox */
+    #menu-toggle:checked + .menu-icon + .menu-fixed ul {
+        display: flex;
+    }
+
+    .menu-fixed ul li {
+        margin: 10px 0;
+        text-align: right; /* Mantiene el e*
