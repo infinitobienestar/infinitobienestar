@@ -777,7 +777,6 @@ margin-left: 100px;
     }
 }
 
-/* ===== Sección Contacto ===== */
 /* ===== Sección Contacto Fluida ===== */
 .contacto {
     width: 100%;
@@ -788,7 +787,7 @@ margin-left: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(20px, 5vw, 60px); /* separación fluida entre imagen y info */
+    gap: clamp(20px, 5vw, 60px); /* separación fluida entre imagen e info */
     flex-wrap: wrap;
 }
 
@@ -843,39 +842,11 @@ margin-left: 100px;
     font-size: clamp(14px, 3vw, 20px);
 }
 
-/* Redes sociales - Original */
+/* ===== Redes sociales - ORIGINAL CORREGIDO ===== */
 .redes-sociales ul {
-    list-style-type: none;
+    list-style: none;       /* elimina viñetas */
     padding: 0;
     margin: 1em 0 0 0;
-    display: flex;
-    justify-content: center;
-}
-
-.redes-sociales li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.red-social img {
-    width: 30px;
-    height: auto;
-    padding: 10px;
-    filter: invert(88%) sepia(18%) saturate(300%) hue-rotate(310deg) brightness(90%) contrast(85%);
-}
-
-.redes-sociales li:first-child .red-social img {
-    margin-left: 0;
-}
-
-/* ===== Media query mínima para móviles */
-@media screen and (max-width: 768px) {
-    .contacto {
-        flex-direction: column;
-        padding: 2em 1em;
-    }
-    .fotocontacto img,
-    .infocontacto {
-        width: 90%;
-    }
-}
+    display: flex;           /* pone los ítems en línea */
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;
