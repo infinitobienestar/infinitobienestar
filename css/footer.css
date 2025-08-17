@@ -73,14 +73,14 @@
     }
 
     .redes-sociales2 ul {
-        gap: 15px;
+        gap: 10px; /* espacio reducido entre íconos */
     }
 
-    .redes-social2 img {
+    .red-social2 img {
         width: 25px;
         height: 25px;
-        padding: 10px;
-        margin-left: 0;
+        padding: 5px;
+        margin-left: 0; /* eliminar margen extra */
     }
 }
 
@@ -92,13 +92,13 @@
     }
 
     .redes-sociales2 ul {
-        gap: 10px;
+        gap: 5px; /* aún menos espacio en móviles */
     }
 
-    .redes-social2 img {
+    .red-social2 img {
         width: 20px;
         height: 20px;
-        padding: 5px;
+        padding: 3px;
         margin-left: 0;
     }
 }
