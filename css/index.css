@@ -787,7 +787,7 @@ margin-left: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* espacio entre imagen e info */
+    gap: 20px; /* espacio entre imagen e info */
     flex-direction: row;  
     flex-wrap: nowrap;    
 }
