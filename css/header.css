@@ -81,6 +81,7 @@
 }
 
 /* Media queries originales */
+/* Media queries unificados para móvil */
 @media (max-width: 768px) {
     .header {
         height: auto;
@@ -89,88 +90,10 @@
 
     #navegador p {
         font-size: 1.5em;
-    }
-
-    #navegador nav ul li {
-        font-size: 18px;
-        margin-left: 5px;
-    }
-
-    .menu-fixed {
-        right: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    #navegador {
-        justify-content: center;
-    }
-
-    #navegador p {
-        font-size: 1.5em;
-        text-align: center;
-        width: 100%;
-        margin: 0;
         order: 1;
-    }
-
-    #navegador nav {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-    }
-
-    #navegador nav ul {
-        justify-content: center;
-        width: 100%;
-    }
-
-    #navegador nav ul li {
-        font-size: 16px;
-        margin-left: 5px;
-    }
-
-    .menu-fixed {
-        top: 60px;
-        right: 5px;
-    }
-}
-
-/* ---------------------- */
-/* Menú hamburguesa sin JS */
-/* ---------------------- */
-
-/* Ocultar checkbox */
-#menu-toggle {
-    display: none;
-}
-
-/* Icono hamburguesa */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.menu-icon span {
-    display: block;
-    height: 4px;
-    background-color: #BD7F22;
-    border-radius: 2px;
-}
-
-/* Media query para móviles */
-@media (max-width: 768px) {
-    .header {
-        height: auto;
-        padding: 1em;
-    }
-
-    #navegador p {
-        font-size: 1.5em;
+        flex: 1;
+        text-align: left;
+        margin: 0;
     }
 
     #navegador nav ul li {
@@ -179,31 +102,9 @@
     }
 
     .menu-fixed {
-        right: 10px;
-    }
-
-    /* ---------------------- */
-    /* Menú hamburguesa modificado */
-    /* ---------------------- */
-    .menu-icon {
-        display: flex;
-        order: 0; /* Primero en el header */
-        margin-left: 0; /* Sin margen */
-        position: absolute; /* Pegada al extremo izquierdo */
-        left: 10px; /* Ajusta si quieres más cerca del borde */
-        top: 50%; 
-        transform: translateY(-50%);
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-    }
-
-    #navegador nav.menu-fixed {
         position: absolute;
         top: 60px; /* Justo debajo del header */
-        right: 0;
+        right: 5px;
         width: 200px;
         background: white;
         border-radius: 8px;
@@ -227,10 +128,45 @@
         text-align: right;
     }
 
-    #navegador p {
-        order: 1; /* Después de la hamburguesa */
-        flex: 1;
-        text-align: left;
-        margin: 0;
+    /* ---------------------- */
+    /* Menú hamburguesa al extremo derecho */
+    /* ---------------------- */
+    .menu-icon {
+        display: flex;
+        order: 2;          /* Va al final */
+        margin-left: auto; /* Lo empuja a la derecha */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    /* Ajustes extras solo para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+        #navegador {
+            justify-content: center;
+        }
+
+        #navegador p {
+            text-align: center;
+            width: 100%;
+        }
+
+        #navegador nav {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        #navegador nav ul {
+            justify-content: center;
+            width: 100%;
+        }
+
+        #navegador nav ul li {
+            font-size: 16px;
+        }
     }
 }
+
