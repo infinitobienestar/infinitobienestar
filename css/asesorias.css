@@ -105,18 +105,19 @@
     .entrenamientoa2,
     .reflexion {
         flex-direction: column;
+        align-items: center;  /* centra imagen y texto */
         text-align: center;
-        overflow-x: hidden;
-        padding: 1rem;
+        padding: 1rem 0;      /* solo padding vertical */
+        gap: 1rem;            /* espacio entre imagen y texto */
     }
 
     /* Imagen centrada y tamaño adecuado */
     .oraculo2-lado1 img,
     .entrenamientoa2-lado1 img,
     .reflexion2-lado1 img {
-        width: 80%;       /* ocupa 80% del ancho de pantalla */
-        max-width: 400px; /* tamaño máximo */
-        margin: 0 auto;   /* centra la imagen */
+        width: 80%;       
+        max-width: 400px; 
+        margin: 0;         /* quitar margen extra */
         display: block;
         height: auto;
     }
@@ -125,8 +126,8 @@
     .oraculo2-lado2,
     .entrenamientoa2-lado2,
     .reflexion2-lado2 {
-        flex: unset;      /* deja de ocupar flex 1 */
-        margin-top: 1rem; /* separa texto de la imagen */
+        flex: unset;      
+        margin-top: 0;    /* quitar margen extra */
     }
 
     /* Ajustes de fuentes solo para contenido, no el header */
@@ -148,4 +149,3 @@
         font-size: 18px;
     }
 }
-
