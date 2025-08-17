@@ -544,9 +544,9 @@ margin-left: 100px;
     min-height: 400px;         /* altura mínima */
     max-height: 800px;            
     background-image: url("../imagenes/infinito.jpeg");
-    background-size: contain;  /* ajusta la imagen al contenedor sin recortarla */
+    background-size: cover; 
     background-repeat: no-repeat;
-    background-position: cover;
+    background-position: center;
     color: white;
     text-align: center;
     padding: 40px 20px;        /* padding normal, sin exagerar */
