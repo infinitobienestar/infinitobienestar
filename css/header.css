@@ -79,7 +79,9 @@
     width: auto;
     max-width: 1300px;
 }
-
+#menu-toggle {
+    display: none;
+}
 /* Movil*/
 
 @media (max-width: 768px) {
