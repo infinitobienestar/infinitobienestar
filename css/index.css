@@ -70,50 +70,37 @@ margin-left: 100px;
 /* Media queries para pantallas pequeñas */
 
 
+/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .inicio {
-    height: auto;
-    padding-top: 56.25%; /* 16:9 ratio */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center top;
-    position: relative;
-    text-align: center; /* texto centrado */
-  }
-
-  .inicio h1, .inicio h2 {
-    position: absolute;
-    left: 50%;           /* para centrar horizontalmente */
-    transform: translateX(-50%); /* centrar exacto */
-    margin: 0;
-    color: #BD7F22;
-    z-index: 2;
-    width: 90%;          /* evitar que el texto se salga */
+    height: 100vh; /* ocupar toda la pantalla del móvil */
+    background-size: cover; /* la imagen llena el contenedor */
+    background-position: center center; /* centrada */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .inicio h1 {
-    top: 12%;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    margin: 0.5em 0;
   }
 
   .inicio h2 {
-    top: 32%;
     font-size: 2rem;
+    margin: 0.5em 0;
   }
 }
 
+/* Pantallas muy pequeñas */
 @media (max-width: 480px) {
-  .inicio {
-    padding-top: 75%; /* un poco más alto para pantallas muy pequeñas */
-  }
-
   .inicio h1 {
-    top: 15%;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .inicio h2 {
-    top: 38%;
     font-size: 1.4rem;
   }
 }
