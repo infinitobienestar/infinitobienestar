@@ -777,6 +777,7 @@ margin-left: 100px;
     }
 }
 
+/*Contacto*/
 .contacto {
     width: 100%;
     min-height: 80vh;
@@ -786,14 +787,15 @@ margin-left: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(20px, 5vw, 60px);
-    flex-direction: row;  /* Lado a lado en escritorio */
-    flex-wrap: nowrap;    /* No se apilan en escritorio */
+    gap: 40px; /* espacio fijo entre imagen e info */
+    flex-direction: row;  
+    flex-wrap: nowrap;    
 }
 
 /* Imagen a la izquierda */
 .fotocontacto img {
-    width: clamp(200px, 40%, 500px);
+    width: 500px; /* tamaño fijo en escritorio */
+    max-width: 40%; /* no se pase del 40% en pantallas grandes */
     height: auto;
     border-radius: 5%;
     object-fit: cover;
@@ -801,7 +803,8 @@ margin-left: 100px;
 
 /* Información a la derecha */
 .infocontacto { 
-    width: clamp(250px, 45%, 600px);
+    width: 600px; /* tamaño fijo en escritorio */
+    max-width: 50%;
     height: auto;
     border: 2px solid #C4BAA6;
     border-radius: 5%;
@@ -810,7 +813,7 @@ margin-left: 100px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 1em;
+    padding: 2em; /* más espacio interno */
     box-sizing: border-box;
 }
 
@@ -837,14 +840,14 @@ margin-left: 100px;
     display: block;
 }
 
-/* Títulos con tamaño fluido */
+/* Títulos */
 .infocontacto h1 {
     font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
     text-align: center;
     color: #C4BAA6;
     font-weight: 100;
     margin: 0.5em 0;
-    font-size: clamp(32px, 6vw, 60px);
+    font-size: 60px;
 }
 
 .infocontacto h2 {
@@ -853,7 +856,7 @@ margin-left: 100px;
     color: #C4BAA6;
     font-weight: 100;
     margin: 0.5em 0;
-    font-size: clamp(18px, 4vw, 30px);
+    font-size: 30px;
 }
 
 .infocontacto h3 {
@@ -862,18 +865,19 @@ margin-left: 100px;
     color: #C4BAA6;
     font-weight: 100;
     margin: 0.5em 0;
-    font-size: clamp(14px, 3vw, 20px);
+    font-size: 20px;
 }
 
 /* ===== Media query para móviles ===== */
 @media screen and (max-width: 768px) {
     .contacto {
-        flex-direction: column; /* Apila imagen e info en móviles */
+        flex-direction: column; 
         flex-wrap: wrap;
         padding: 2em 1em;
     }
     .fotocontacto img,
     .infocontacto {
-        width: 90%; /* ocupan casi todo el ancho en móvil */
+        width: 90%; 
     }
 }
+
