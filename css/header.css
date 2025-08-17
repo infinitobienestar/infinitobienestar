@@ -80,8 +80,8 @@
     max-width: 1300px;
 }
 
-/* Media queries originales */
-/* Media queries unificados para móvil */
+/* Movil*/
+
 @media (max-width: 768px) {
     .header {
         height: auto;
@@ -101,7 +101,27 @@
         margin-left: 5px;
     }
 
-    .menu-fixed {
+    /* Menú hamburguesa */
+    .menu-icon {
+        display: flex;
+        order: 2;          /* Va al final */
+        margin-left: auto; /* Empuja todo hacia la izquierda */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 4px;
+        background-color: #BD7F22;
+        border-radius: 2px;
+    }
+
+    /* Menú oculto por defecto */
+    #navegador nav.menu-fixed {
         position: absolute;
         top: 60px; /* Justo debajo del header */
         right: 5px;
@@ -109,11 +129,12 @@
         background: white;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        display: none; /* Solo visible cuando checkbox está activo */
+        display: none; /* 🔥 Oculto hasta que se active el checkbox */
         flex-direction: column;
         z-index: 1000;
     }
 
+    /* Menú visible SOLO cuando se marca el checkbox */
     #menu-toggle:checked + .menu-icon + .menu-fixed {
         display: flex;
     }
@@ -126,20 +147,6 @@
     .menu-fixed ul li {
         margin: 10px 0;
         text-align: right;
-    }
-
-    /* ---------------------- */
-    /* Menú hamburguesa al extremo derecho */
-    /* ---------------------- */
-    .menu-icon {
-        display: flex;
-        order: 2;          /* Va al final */
-        margin-left: auto; /* Lo empuja a la derecha */
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
     }
 
     /* Ajustes extras solo para pantallas muy pequeñas */
@@ -169,4 +176,3 @@
         }
     }
 }
-
