@@ -141,36 +141,51 @@ margin-left: 100px;
     margin-right: 2em;
 }
 
-/* Media queries para adaptabilidad */
+/* =======Media queries para adaptabilidad======= */
+/* Pantallas grandes */
 @media (max-width: 1200px) {
     .bienvenido .lado2 {
-        font-size: 1.5em; /* Reducir tamaño de fuente para pantallas más pequeñas */
-        margin-right: 50px; /* Reducir margen */
+        font-size: 1.5em;
+        margin-right: 50px;
     }
 }
 
+/* Tablets / pantallas medianas */
 @media (max-width: 768px) {
     .bienvenido {
-        grid-template-columns: 1fr; /* Apilar las columnas verticalmente */
-        height: auto; /* Ajustar altura al contenido */
+        grid-template-columns: 1fr; /* Una columna */
+        row-gap: 20px; /* Espacio entre imagen y texto */
+        height: auto;
     }
 
     .bienvenido .lado2 {
-        font-size: 4vw; /* Reducir tamaño de fuente para pantallas más pequeñas */
-        margin-right: 1em; /* Reducir margen */
+        font-size: 2em; /* Ajuste proporcional para tablet */
+        margin-right: 0;
+        text-align: center; /* Centrar texto debajo de la imagen */
     }
 }
 
+/* Móviles */
 @media (max-width: 480px) {
+    .bienvenido {
+        row-gap: 15px; /* Espacio entre imagen y texto */
+    }
+
     .bienvenido .lado1 img {
-        width: 90%; /* Aumentar el ancho de la imagen en pantallas muy pequeñas */
+        width: 70%; /* Imagen más pequeña */
+        display: block;
+        margin: 0 auto; /* Centrar imagen */
+        height: auto;
     }
 
     .bienvenido .lado2 {
-        font-size: 3vw; /* Reducir tamaño de fuente aún más para pantallas muy pequeñas */
-        margin-right: 1em; /* Reducir margen */
+        font-size: 4vw; /* Tamaño legible proporcional al ancho */
+        margin-right: 0;
+        text-align: center;
+        padding: 0 10px; /* Evitar que el texto toque los bordes */
     }
 }
+
 /* ===== ASESORÍAS ===== */
 
 .asesorias {
