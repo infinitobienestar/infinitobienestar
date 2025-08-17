@@ -207,7 +207,7 @@ margin-left: 100px;
 
 .asesorias-container {
     display: grid;
-    height: 600px;
+    height:auto;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: black;
 }
@@ -300,7 +300,6 @@ margin-left: 100px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* ===== MEDIA QUERY PARA MÓVIL ===== */
 /* ===== MEDIA QUERY MÓVIL PARA ASESORÍAS ===== */
 @media (max-width: 768px) {
     .asesorias {
