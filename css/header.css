@@ -83,6 +83,91 @@
     display: none;
 }
 /* Movil*/
+/* Estilo del header */
+.header {
+    width: 100%;
+    height: 6em;
+    background-color: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid #BD7F22;
+    z-index: 2;
+    padding: 0 2em;
+    box-sizing: border-box;
+}
+
+.navega img {
+    width: 2em;
+    height: auto;
+}
+
+#compras img {
+    filter: hue-rotate(220deg) saturate(100%) brightness(100%);
+}
+
+#navegador {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#navegador p {
+    color: #BD7F22;
+    font-size: 2em;
+    text-align: right;
+    font-weight: bold;
+    margin: 0;
+}
+
+#navegador nav {
+    display: flex;
+    align-items: center;
+}
+
+#navegador nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#navegador nav ul li {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#navegador .menu-fixed ul li a {
+    display: block;
+    padding: 10px;
+    color: #BD7F22;
+    text-decoration: none;
+}
+
+#navegador nav ul li:hover {
+    background: white;
+}
+
+#navegador .menu-fixed {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 30px;
+    width: auto;
+    max-width: 1300px;
+}
+#menu-toggle {
+    display: none;
+}
+/* Movil*/
 
 @media (max-width: 768px) {
     .header {
