@@ -303,32 +303,43 @@ margin-left: 100px;
 /* ===== MEDIA QUERY PARA MÓVIL ===== */
 @media (max-width: 768px) {
     .asesorias {
-        position: relative; /* ya no necesitamos z-index alto */
-        z-index: 1; /* menor que el header */
+        position: relative;
+        z-index: 1;
         height: auto;
-        overflow: hidden; /* evita que elementos internos se salgan */
-        padding: 10px; /* espacio interno seguro */
+        overflow: hidden;
+        padding: 10px;
     }
 
     .asesorias-container {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0; /* padding lo maneja .asesorias */
-        width: 100%; /* asegura que no desborde */
+        grid-template-columns: 1fr; /* una columna */
+        gap: 15px; /* espacio entre asesorías */
+        width: 100%;
         box-sizing: border-box;
+        justify-items: center; /* centra las asesorías dentro del contenedor */
     }
 
     .asesoria1,
     .asesoria2,
     .asesoria3 {
         padding: 10px;
-        width: 100%; /* asegura que no exceda el contenedor */
+        width: 90%; /* ahora ocupan 90% del ancho */
         box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    /* Ajuste de títulos dentro de cada asesoría */
+    .asesoria1 h2,
+    .asesoria2 h2,
+    .asesoria3 h2 {
+        font-size: 1rem; /* un poco más pequeño que el original */
+        margin-top: 8px;
+        word-wrap: break-word;
     }
 
     .oraculo-info {
-        width: 100%; /* ocupa todo el ancho disponible */
+        width: 100%;
         margin: 0 auto;
         height: auto;
         padding: 10px;
@@ -339,17 +350,16 @@ margin-left: 100px;
     .oraculo-info h2 {
         font-size: 1.2rem;
         margin-top: 10px;
-        word-wrap: break-word; /* evita textos largos que desborden */
+        word-wrap: break-word;
     }
 
     .asesorias-container img {
         width: 100%;
-        max-width: 100%; /* evita overflow */
+        max-width: 100%;
         height: auto;
         display: block;
     }
 }
-
 
 /* ===== CURSOS ===== */
 
