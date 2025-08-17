@@ -83,116 +83,31 @@
     display: none;
 }
 /* Movil*/
-/* Estilo del header */
-.header {
-    width: 100%;
-    height: 6em;
-    background-color: none;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-bottom: 3px solid #BD7F22;
-    z-index: 2;
-    padding: 0 2em;
-    box-sizing: border-box;
-}
-
-.navega img {
-    width: 2em;
-    height: auto;
-}
-
-#compras img {
-    filter: hue-rotate(220deg) saturate(100%) brightness(100%);
-}
-
-#navegador {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-#navegador p {
-    color: #BD7F22;
-    font-size: 2em;
-    text-align: right;
-    font-weight: bold;
-    margin: 0;
-}
-
-#navegador nav {
-    display: flex;
-    align-items: center;
-}
-
-#navegador nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-#navegador nav ul li {
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-weight: 400;
-}
-
-#navegador .menu-fixed ul li a {
-    display: block;
-    padding: 10px;
-    color: #BD7F22;
-    text-decoration: none;
-}
-
-#navegador nav ul li:hover {
-    background: white;
-}
-
-#navegador .menu-fixed {
-    position: fixed;
-    z-index: 2000;
-    top: 0;
-    right: 30px;
-    width: auto;
-    max-width: 1300px;
-}
-#menu-toggle {
-    display: none;
-}
-/* Movil*/
-
 @media (max-width: 768px) {
     .header {
         height: auto;
         padding: 1em;
     }
 
+    #navegador {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
     #navegador p {
         font-size: 1.5em;
         order: 1;
-        flex: 1;
-        text-align: left;
         margin: 0;
+        text-align: left;
+        flex: 0 0 auto; /* 👈 evita que ocupe todo el ancho */
     }
 
-    #navegador nav ul li {
-        font-size: 18px;
-        margin-left: 5px;
-    }
-
-    /* Menú hamburguesa */
+    /* Menú hamburguesa al extremo derecho */
     .menu-icon {
         display: flex;
-        order: 2;          /* Va al final */
-        margin-left: auto; /* Empuja todo hacia la izquierda */
+        order: 2;          /* siempre después del título */
+        margin-left: auto; /* 👈 lo empuja al borde derecho */
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
@@ -210,18 +125,17 @@
     /* Menú oculto por defecto */
     #navegador nav.menu-fixed {
         position: absolute;
-        top: 60px; /* Justo debajo del header */
+        top: 60px;
         right: 5px;
         width: 200px;
         background: white;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        display: none; /* 🔥 Oculto hasta que se active el checkbox */
+        display: none;
         flex-direction: column;
         z-index: 1000;
     }
 
-    /* Menú visible SOLO cuando se marca el checkbox */
     #menu-toggle:checked + .menu-icon + .menu-fixed {
         display: flex;
     }
@@ -235,31 +149,5 @@
         margin: 10px 0;
         text-align: right;
     }
-
-    /* Ajustes extras solo para pantallas muy pequeñas */
-    @media (max-width: 480px) {
-        #navegador {
-            justify-content: center;
-        }
-
-        #navegador p {
-            text-align: center;
-            width: 100%;
-        }
-
-        #navegador nav {
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-        }
-
-        #navegador nav ul {
-            justify-content: center;
-            width: 100%;
-        }
-
-        #navegador nav ul li {
-            font-size: 16px;
-        }
-    }
 }
+
