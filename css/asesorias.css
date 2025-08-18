@@ -53,16 +53,6 @@ body {
     padding: 2rem;
 }
 
-/* Adaptación a móviles */
-@media (max-width: 768px) {
-    .oraculo2,
-    .entrenamientoa2,
-    .reflexion2 {
-        flex-direction: column;
-        text-align: center;
-        overflow-x: hidden;
-    }
-}
 
 /* Imágenes de bloques */
 .oraculo2-lado1 img,
@@ -110,3 +100,15 @@ body {
     font-weight: 100;
     margin: 0.5em 0;
 }
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+    .oraculo2,
+    .entrenamientoa2,
+    .reflexion2 {
+        flex-direction: column;
+        text-align: center;
+        overflow-x: hidden;
+    }
+}
+
