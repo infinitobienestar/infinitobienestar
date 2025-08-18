@@ -1,54 +1,48 @@
-.body{
-    width:100%;
+/* Body */
+body {
+    width: 100%;
     height: 100%;
-    background-color:black;
+    background-color: black;
+    margin: 0;
+    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
 }
 
-.inicio-asesoria{
-    width:100%;
+/* Sección inicio asesoría */
+.inicio-asesoria {
+    width: 100%;
     height: 800px;
-    background-color:black;
+    background-color: black;
 }
 
-.inicio-asesoria img{
-    width:100%;
-    height: 600px;
+.inicio-asesoria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Título principal */
+.tituloasesorias {
     display: flex;
-}
-
-.tituloasesorias{
-    display:flex;
-    align-items: center;
-    color: #BD7F22;
     justify-content: center;   
     align-items: center; 
     text-align: center;
+    color: #BD7F22;
     font-size: 80px;
-    font-family: 'Cormorant Garamond',Arial, Helvetica, sans-serif;
-    margin-top:0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
+/* Catálogo de asesorías */
 .catalogoasesorias {
     width: 100%;
     background-color: black;
     display: flex;
-    flex-direction: column; /* ahora va en columna */
-    gap: 2rem; /* espacio entre bloques */
-    padding: 2rem 0;
-}
-
-/* Imagen arriba, texto abajo */
-.catalogoasesorias {
-    width: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column; /* cada bloque uno debajo del otro */
+    flex-direction: column;
     gap: 2rem;
     padding: 2rem 0;
 }
 
-/* Bloques generales: oraculo, entrenamiento, reflexion */
+/* Bloques de asesoría: Oráculo, Entrenamiento, Reflexión */
 .oraculo2,
 .entrenamientoa2,
 .reflexion {
@@ -59,7 +53,7 @@
     padding: 2rem;
 }
 
-/* En móviles, que se pongan en columna */
+/* Adaptación a móviles */
 @media (max-width: 768px) {
     .oraculo2,
     .entrenamientoa2,
@@ -70,7 +64,7 @@
     }
 }
 
-/* Imágenes */
+/* Imágenes de bloques */
 .oraculo2-lado1 img,
 .entrenamientoa2-lado1 img,
 .reflexion2-lado1 img {
@@ -80,7 +74,7 @@
     display: block;
 }
 
-/* Texto */
+/* Texto de bloques */
 .oraculo2-lado2,
 .entrenamientoa2-lado2,
 .reflexion2-lado2 {
@@ -93,7 +87,6 @@
 .reflexion2-lado2 h1 {
     color: #BD7F22;
     font-size: 60px;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
     margin: 0.5em 0;
 }
 
