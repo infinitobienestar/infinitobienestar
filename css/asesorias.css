@@ -64,11 +64,11 @@ body {
 }
 
 /* Texto de bloques */
-/*.oraculo2-lado2,
+.oraculo2-lado2,
 .entrenamientoa2-lado2,
 .reflexion2-lado2 {
     flex: 1;
-}*/
+}
 
 /* Títulos */
 .oraculo2-lado2 h1,
