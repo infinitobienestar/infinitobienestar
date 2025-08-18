@@ -73,7 +73,7 @@
 /* Imágenes */
 .oraculo2-lado1 img,
 .entrenamientoa2-lado1 img,
-.reflexion2-lado1 img {
+.reflexion-lado1 img {
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -83,14 +83,14 @@
 /* Texto */
 .oraculo2-lado2,
 .entrenamientoa2-lado2,
-.reflexion2-lado2 {
+.reflexion-lado2 {
     flex: 1;
 }
 
 /* Títulos */
 .oraculo2-lado2 h1,
 .entrenamientoa2-lado2 h1,
-.reflexion2-lado2 h1 {
+.reflexion-lado2 h1 {
     color: #BD7F22;
     font-size: 60px;
     font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
@@ -100,7 +100,7 @@
 /* Subtítulos */
 .oraculo2-lado2 h2,
 .entrenamientoa2-lado2 h2,
-.reflexion2-lado2 h2 {
+.reflexion-lado2 h2 {
     color: #BD7F22;
     font-size: 30px;
     font-style: oblique;
@@ -111,7 +111,7 @@
 /* Texto descriptivo */
 .oraculo2-lado2 h3,
 .entrenamientoa2-lado2 h3,
-.reflexion2-lado2 h3 {
+.reflexion-lado2 h3 {
     color: white;
     font-size: 30px;
     font-weight: 100;
