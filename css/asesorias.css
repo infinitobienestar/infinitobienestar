@@ -1,116 +1,42 @@
-body {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-}
-
-.inicio-asesoria {
-    width: 100%;
-    min-height: 80vh; /* más flexible que height fija */
-    background-color: black;
-}
-
-.inicio-asesoria img {
-    width: 100%;
-    max-height: 600px; /* limita el alto pero mantiene proporción */
-    object-fit: cover; /* evita deformaciones */
-    display: block;
-}
-
-.tituloasesorias {
-    display: flex;
-    justify-content: center;   
-    align-items: center; 
-    text-align: center;
-    color: #BD7F22;
-    font-size: 80px;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 1rem;
-}
-
-.catalogoasesorias {
-    width: 100%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-/* Bloques generales */
-.oraculo2,
-.entrenamientoa2,
+/* Bloque Reflexión: corregimos el espaciado */
 .reflexion {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
     padding: 2rem;
+    margin: 0 auto;        /* centra el bloque */
+    max-width: 1200px;     /* evita que se estire demasiado */
+    box-sizing: border-box;
 }
 
-/* Imágenes */
-.oraculo2-lado1 img,
-.entrenamientoa2-lado1 img,
-.reflexion2-lado1 img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
-
-/* Texto */
-.oraculo2-lado2,
-.entrenamientoa2-lado2,
-.reflexion2-lado2 {
-    flex: 1;
-}
-
-/* Títulos */
-.oraculo2-lado2 h1,
-.entrenamientoa2-lado2 h1,
-.reflexion2-lado2 h1 {
-    color: #BD7F22;
-    font-size: 60px;
-    font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-    margin: 0.5em 0;
-}
-
-/* Subtítulos */
-.oraculo2-lado2 h2,
-.entrenamientoa2-lado2 h2,
-.reflexion2-lado2 h2 {
-    color: #BD7F22;
-    font-size: 30px;
-    font-style: oblique;
-    font-weight: 100;
-    margin: 0.5em 0;
-}
-
-/* Texto descriptivo */
-.oraculo2-lado2 h3,
-.entrenamientoa2-lado2 h3,
+/* Quitamos márgenes raros en títulos y textos */
+.reflexion2-lado2 h1,
+.reflexion2-lado2 h2,
 .reflexion2-lado2 h3 {
-    color: white;
-    font-size: 30px;
-    font-weight: 100;
-    margin: 0.5em 0;
+    margin: 0.5em 0; 
+    line-height: 1.3;
 }
 
-/* 📱 Responsive para pantallas pequeñas */
+/* 📱 Responsive */
 @media (max-width: 768px) {
     .oraculo2,
     .entrenamientoa2,
     .reflexion {
-        flex-direction: column; /* cambia a columna */
+        flex-direction: column; /* columna en móvil */
         text-align: center;
     }
 
+    /* Las imágenes arriba del texto */
+    .oraculo2-lado1,
+    .entrenamientoa2-lado1,
+    .reflexion2-lado1 {
+        order: -1; /* mueve imagen arriba */
+        margin-bottom: 1rem;
+    }
+
     .tituloasesorias {
-        font-size: 50px; /* más pequeño en móvil */
+        font-size: 50px;
     }
 
     .oraculo2-lado2 h1,
@@ -125,5 +51,3 @@ body {
         font-size: 22px;
     }
 }
-
-
