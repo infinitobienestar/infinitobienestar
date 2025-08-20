@@ -100,7 +100,7 @@ body {
     margin: 0.5em 0;
 }
 
-/* Adaptación a móviles para bloques de asesoría */
+
 /* Media query para móviles y tablets (sin alterar el header) */
 @media (max-width: 768px) {
 
