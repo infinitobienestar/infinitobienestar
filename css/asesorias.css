@@ -10,7 +10,7 @@ body {
 /* Sección inicio asesoría */
 .inicio-asesoria {
     width: 100%;
-    height: 800vh;
+   min-height: 100vh; /* ajusta al alto de la pantalla */;
     background-color: black;
 }
 
