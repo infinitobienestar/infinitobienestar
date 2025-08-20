@@ -45,7 +45,7 @@ body {
 /* Bloques de asesoría: Oráculo, Entrenamiento, Reflexión */
 .oraculo2,
 .entrenamientoa2,
-.reflexion {
+.reflexion2 {
     display: flex;
     flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
     align-items: center;
@@ -104,7 +104,7 @@ body {
 @media (max-width: 768px) {
     .oraculo2,
     .entrenamientoa2,
-    .reflexion {
+    .reflexion2 {
         flex-direction: column;       /* Imagen arriba, texto abajo */
         text-align: center;           /* Centra el texto */
         gap: 1rem;                    /* Espacio reducido */
