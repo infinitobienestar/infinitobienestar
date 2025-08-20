@@ -101,32 +101,59 @@ body {
 }
 
 /* Adaptación a móviles para bloques de asesoría */
+/* Media query para móviles y tablets (sin alterar el header) */
 @media (max-width: 768px) {
+
+    /* --- Bloques de asesoría --- */
     .oraculo2,
     .entrenamientoa2,
     .reflexion2 {
-        flex-direction: column;       /* Imagen arriba, texto abajo */
-        text-align: center;           /* Centra el texto */
-        gap: 1rem;                    /* Espacio reducido */
-        padding: 1rem;                /* Padding más compacto */
-        overflow-x: hidden;           /* Evita que se mueva horizontalmente */
+        flex-direction: column;   /* Imagen arriba, texto abajo */
+        text-align: center;       /* centra el texto */
+        gap: 1rem;                /* reduce espacio */
+        padding: 1rem;            /* padding más compacto */
+        overflow-x: hidden;       /* evita scroll horizontal */
     }
 
-    /* Ajuste de imágenes para que no excedan el ancho */
     .oraculo2-lado1 img,
     .entrenamientoa2-lado1 img,
     .reflexion2-lado1 img {
-        max-width: 100%;
+        max-width: 100%;          /* que no exceda el ancho */
         height: auto;
         display: block;
     }
 
-    /* Ajuste de títulos y subtítulos */
     .oraculo2-lado2 h1,
     .entrenamientoa2-lado2 h1,
     .reflexion2-lado2 h1 {
         font-size: 40px;
     }
+
+    .oraculo2-lado2 h2,
+    .entrenamientoa2-lado2 h2,
+    .reflexion2-lado2 h2 {
+        font-size: 20px;
+    }
+
+    .oraculo2-lado2 h3,
+    .entrenamientoa2-lado2 h3,
+    .reflexion2-lado2 h3 {
+        font-size: 18px;
+    }
+
+    /* --- Catálogo de asesorías --- */
+    .catalogoasesorias {
+        gap: 1.5rem; /* menos espacio en móvil */
+        padding: 1rem 0;
+    }
+
+    /* --- Opcional: ajuste general de body --- */
+    body {
+        font-size: 16px; /* tamaño base legible */
+        overflow-x: hidden;
+    }
+}
+
 
     .oraculo2-lado2 h2,
     .entrenamientoa2-lado2 h2,
