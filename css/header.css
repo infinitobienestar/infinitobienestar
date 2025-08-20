@@ -136,7 +136,7 @@
         z-index: 1000;
     }
 
-    #menu-toggle:checked + .menu-icon + .menu-fixed {
+    #menu-toggle:checked + .menu-icon ~ .menu-fixed {
         display: flex;
     }
 
